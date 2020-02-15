@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Become a partner</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+            <ul class="navigation__left">
+                <li class="navigation__item"><a href="index.html" class="navigation__link">Home</a></li>
+                <li class="navigation__item"><a href="index.html#about" class="navigation__link">About</a></li>
+                <li class="navigation__item"><a href="index.html#product" class="navigation__link">Product</a></li>
+                <li class="navigation__item"><a href="index.html#contact" class="navigation__link">Contact us</a></li>
+                <li class="navigation__item"><a href="#help" class="navigation__link">Help</a></li>
+            </ul>
+            <ul class="navigation__right">
+                <li class="navigation__item"><a href="signup.html" class="navigation__right__link">Sign up</a></li>
+                <li class="navigation__item"><a href="login.html" class="navigation__right__link">Log In</a></li>
+            </ul>
+            <span class="open-slide">
+                <a onclick="openSlideMenu()">
+                <svg width="30" height="30">
+                    <path d="M0,5 30,5" stroke="#2998ff" stroke-width="5"/>
+                    <path d="M0,14 30,14" stroke="#2998ff" stroke-width="5"/>
+                    <path d="M0,23 30,23" stroke="#2998ff" stroke-width="5"/>
+                </svg>
+                </a>
+            </span>
+            <div id="side-menu" class="side-nav">
+                <a class="btn-close" onclick="closeSlideMenu()">&times;</a>
+                <ul class="side-nav__list">
+                    <li class="side-nav__item"><a class="side-nav__link" href="index.html">Home</a></li>
+                    <li class="side-nav__item"><a class="side-nav__link" href="index.html#about">About</a></li>
+                    <li class="side-nav__item"><a class="side-nav__link" href="#index.html#product">Product</a></li>
+                    <li class="side-nav__item"><a class="side-nav__link" href="index.html#contact">Contact us</a></li>
+                    <li class="side-nav__item"><a class="side-nav__link" href="#help">Help</a></li>
+                    <li class="side-nav__item2"><a class="side-nav__link2" href="login.html">Log In</a></li>
+                    <li class="side-nav__item2"><a class="side-nav__link2" href="signup.html">Sign Up</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="section-login">
+        <div class="sign-form">
+            <form action="#">
+                <div class="sign-form__head">
+                    <svg class="sign-form__head--icon">
+                        <use xlink:href="img/sprite.svg#icon-user-circle-o1"></use>
+                    </svg>
+                    <h2 class="sign-form__head--text">Create your account</h2>
+                </div>
+                <div class="sign-form__body">
+                    <div class="sign-form__group">
+                        <div class="sign-form__input-box">
+                            <label class="sign-form__label" for="teamname">Team name</label>
+                            <input type="text" name="firstname">
+                        </div>
+                        <div class="sign-form__input-box">
+                            <label class="sign-form__label" for="lastname">What is your organization name?</label>
+                            <input type="email" name="lastname">
+                        </div>
+                    </div>
+                    <div class="sign-form__group">
+                        <div class="sign-form__input-box">
+                            <label class="sign-form__label" for="workemail">What is the main you want to organize?</label>
+                            <input type="text" name="workemail">
+                        </div>
+                        <div class="sign-form__input-box">
+                            <label class="sign-form__label" for="phone">What will you be using BYT for?</label>
+                            <select>
+                                <option value="chooese1">Choose one</option>
+                                <option value="choose2">test 1</option>
+                                <option value="choose3">test 2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="sign-form__group">
+                        <div class="sign-form__input-box">
+                            <label class="sign-form__label" for="question">What is your main sport?</label>
+                            <input type="password" name="question">
+                        </div>
+                        <div class="sign-form__input-box">
+                            <label class="sign-form__label" for="password-again">Which of the following describes you best?</label>
+                            <select>
+                                <option value="chooese1">Choose one</option>
+                                <option value="choose2">test 1</option>
+                                <option value="choose3">test 2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                    <a class="sign-form__later" href="#">I will do this later</a>
+                    <a class="sign-form__btn" href="#">Complete</a>
+                </div>
+            </form>
+        </div>
+</section>
+    <footer class="footer" id="help">
+        <div class="row">
+            <div class="col-1-of-2">
+                <div class="footer__navigation">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Carrers</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Privacy policy</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+                        <li class="footer__item"><a href="http://heikikotsar.ikt.khk.ee/BYT-partner/BYT/index.html" class="footer__link">Become a partner</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-1-of-2">
+                <p class="footer__copyright">
+                    &copy; 2019 Book Your Training
+               </p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

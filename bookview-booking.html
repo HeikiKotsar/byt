@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Heiki Kotsar">
+    <meta name="description" content="BookYourTraining">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BookYourTraining</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/icon-font.css">
+</head>
+<body class="bookview-body">
+    <header id="home">
+        <nav class="navigation">
+            <ul class="navigation__left">
+                <li class="navigation__item"><a href="#home" class="navigation__link">Home</a></li>
+                <li class="navigation__item"><a href="#about" class="navigation__link">About</a></li>
+                <li class="navigation__item"><a href="#product" class="navigation__link">Product</a></li>
+                <li class="navigation__item"><a href="#contact" class="navigation__link">Contact us</a></li>
+                <li class="navigation__item"><a href="#help" class="navigation__link">Help</a></li>
+            </ul>
+            <ul class="navigation__right">
+                <li class="navigation__item"><a href="signup.html" class="navigation__right__link">Sign up</a></li>
+                <li class="navigation__item"><a href="login.html" class="navigation__right__link">Log In</a></li>
+            </ul>
+            <span class="open-slide">
+                <a onclick="openSlideMenu()">
+                  <svg width="30" height="30">
+                      <path d="M0,5 30,5" stroke="#2998ff" stroke-width="5"/>
+                      <path d="M0,14 30,14" stroke="#2998ff" stroke-width="5"/>
+                      <path d="M0,23 30,23" stroke="#2998ff" stroke-width="5"/>
+                  </svg>
+                </a>
+            </span>
+            <div id="side-menu" class="side-nav">
+                <a class="btn-close" onclick="closeSlideMenu()">&times;</a>
+                <ul class="side-nav__list">
+                    <li class="side-nav__item"><a class="side-nav__link" href="#home">Home</a></li>
+                    <li class="side-nav__item"><a class="side-nav__link" href="#about">About</a></li>
+                    <li class="side-nav__item"><a class="side-nav__link" href="#product">Product</a></li>
+                    <li class="side-nav__item"><a class="side-nav__link" href="#contact">Contact us</a></li>
+                    <li class="side-nav__item"><a class="side-nav__link" href="#help">Help</a></li>
+                    <li class="side-nav__item2"><a class="side-nav__link2" href="login.html">Log In</a></li>
+                    <li class="side-nav__item2"><a class="side-nav__link2" href="signup.html">Sign Up</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="book-container">
+            <section class="bookview">
+                <div class="bookview__banner">
+                    <div >
+                        <img class="book-img" src="img/jalka2.jpg" alt="sport">
+                    </div>
+                    <div >
+                        <img class="book-img" src="img/sport2.jpg" alt="sport">
+                    </div>
+                    <div >
+                        <img class="book-img" src="img/bike.jpg" alt="sport">
+                    </div>
+                </div>
+                <div class="bookview__head">
+                    <h1 class="heading">
+                        Sport Centre
+                    </h1>
+                    <div class="bookview__nav">
+                        <ul class="bookview__nav--list">
+                            <li class="bookview__nav--item"><a href="bookview.html">About the center</a></li>
+                            <li class="bookview__nav--item"><a href="bookview-booking.html">Booking</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="booking">
+                <div class="bookview__content">
+                    <div class="booking__custom">
+                        <div class="booking__head">
+                            <h2>Custom booking</h2>
+                        </div>
+                        <div class="booking__body">
+                            <form action="#">
+                                <div class="booking__group">
+                                    <div class="booking__flex">
+                                       <h2 class="margin-right">Inimeste arv</h2>
+                                       <input type="text" class="booking__count">
+                                    </div>
+                                    <div class="booking__flex">
+                                        <div class="booking__flex margin-right">
+                                            <label for="korraldajad">Korraldajad</label>
+                                            <button class="booking__countbtn">
+                                                <svg class="booking__countbtn--icon">
+                                                    <use xlink:href="img/sprite.svg#icon-minus-alt"></use>
+                                                </svg>
+                                            </button>
+                                            <span>0</span>
+                                            <button class="booking__countbtn">
+                                                <svg class="booking__countbtn--icon">
+                                                    <use xlink:href="img/sprite.svg#icon-plus-alt"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="booking__flex">
+                                            <label for="osajelad">Osalejad</label>
+                                            <button class="booking__countbtn">
+                                                <svg class="booking__countbtn--icon">
+                                                    <use xlink:href="img/sprite.svg#icon-minus-alt"></use>
+                                                </svg>
+                                            </button>
+                                            <span>0</span>
+                                            <button class="booking__countbtn">
+                                                <svg class="booking__countbtn--icon">
+                                                    <use xlink:href="img/sprite.svg#icon-plus-alt"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="booking__group">
+                                    <h2>Sportirajatised (max 2)</h2>
+                                    <div class="booking__checkboxes">
+                                        <div class="booking__flex">
+                                            <input class="booking__checkbox" type="checkbox">
+                                            <label for="rajatised">Korvpalliväljak</label>
+                                            <button id="modal-btn" class="booking__countbtn">
+                                                <svg class="booking__countbtn--icon">
+                                                    <use xlink:href="img/sprite.svg#icon-image"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        
+                                        <div class="booking__flex">
+                                            <input class="booking__checkbox" type="checkbox">
+                                            <label for="rajatised">Jalgpalliväljak</label>
+                                            <button class="booking__countbtn">
+                                                <svg class="booking__countbtn--icon">
+                                                    <use xlink:href="img/sprite.svg#icon-image"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+
+                                        <div class="booking__flex">
+                                            <input class="booking__checkbox" type="checkbox">
+                                            <label for="rajatised">Vorkpalliväljak</label>
+                                            <button class="booking__countbtn">
+                                                <svg class="booking__countbtn--icon">
+                                                    <use xlink:href="img/sprite.svg#icon-image"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        
+                                        <div class="booking__flex">
+                                            <input class="booking__checkbox" type="checkbox">
+                                            <label for="rajatised">Kergejoustiku staadion</label>
+                                            <button class="booking__countbtn">
+                                                <svg class="booking__countbtn--icon">
+                                                    <use xlink:href="img/sprite.svg#icon-image"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                    
+                                </div>
+                                <div class="booking__group">
+                                    <div class="booking__flex">
+                                        <div class="margin-right">
+                                            <label class="display__block" for="checkin">Check in</label>
+                                            <input class="booking__date" type="date">
+                                        </div>
+                                        <div>
+                                            <label class="display__block" for="checkin">Check out</label>
+                                            <input class="booking__date" type="date">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="booking__group">
+                                    <h2>Majutus</h2>
+                                    <div class="booking__majutus">
+                                        <div class="booking__majutus--item">
+                                            <div class="booking__header">
+                                                <a href="#">Hotell 1</a>
+                                            </div>
+                                            <div class="booking__content">
+                                                <div class="booking__flex">
+                                                    <label class="margin-right" for="twin">Twin</label>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-minus-alt"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <span>0</span>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-plus-alt"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-image"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="booking__flex">
+                                                    <label class="margin-right" for="triple">Triple</label>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-minus-alt"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <span>0</span>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-plus-alt"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-image"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="booking__flex">
+                                                    <label class="margin-right" for="triple">Suite</label>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-minus-alt"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <span>0</span>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-plus-alt"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-image"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="booking__majutus--item">
+                                            <div class="booking__header">
+                                                <a href="#">Hotell 2</a>
+                                            </div>
+                                            <div class="booking__content">
+                                                <div class="booking__flex">
+                                                    <label class="margin-right" for="twin">Twin</label>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-minus-alt"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <span>0</span>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-plus-alt"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-image"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="booking__flex">
+                                                    <label class="margin-right" for="triple">Triple</label>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-minus-alt"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <span>0</span>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-plus-alt"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-image"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="booking__majutus--item">
+                                            <div class="booking__header">
+                                                <a href="#">Hotell 3</a>
+                                            </div>
+                                            <div class="booking__content">
+                                                <div class="booking__flex">
+                                                    <label class="margin-right" for="twin">Twin</label>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-minus-alt"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <span>0</span>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-plus-alt"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-image"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="booking__majutus--item">
+                                            <div class="booking__header">
+                                                <a href="#">Hotell 4</a>
+                                            </div>
+                                            <div class="booking__content">
+                                                <div class="booking__flex">
+                                                    <label class="margin-right" for="twin">Twin</label>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-minus-alt"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <span>0</span>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-plus-alt"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-image"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="booking__flex">
+                                                    <label class="margin-right" for="triple">Triple</label>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-minus-alt"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <span>0</span>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-plus-alt"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-image"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="booking__group">
+                                    <h2>Toitlustus</h2>
+                                        <div class="booking__check">
+                                            <div class="booking__flex">
+                                                <input class="booking__checkbox" type="checkbox">
+                                                <label for="rajatised">Hommikusöök</label>
+                                            </div>
+                                            <div class="booking__flex">
+                                                <input class="booking__checkbox" type="checkbox">
+                                                <label for="rajatised">Lõuna</label>
+                                            </div>
+                                            <div class="booking__flex">
+                                                <input class="booking__checkbox" type="checkbox">
+                                                <label for="rajatised">Õhtusook</label>
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="booking__group">
+                                    <h2>Lisateenused</h2>
+                                    <div class="booking__flex">
+                                        <p class="margin-right">Sauna 1x</p>
+                                        <span class="booking__price">15€</span>
+                                    </div>
+                                </div>
+                                <div class="booking__group ">
+                                    <div class="booking__flex">
+                                        <h2 class="margin-right">Ööpäeva hind/inimene</h2>
+                                        <span class="booking__price">0€</span>
+                                    </div>
+                                </div>
+                                <div class="booking__group">
+                                    <div class="booking__flex">
+                                        <h2 class="margin-right">Kokku</h2>
+                                        <span class="booking__price">0€</span>
+                                    </div>
+                                </div>
+                                <div class="booking__request">
+                                    <a href="#">Broneeringu tühistamise tingimused </a>
+                                    <button class="booking__button">Request a booking</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="booking__pakett">
+                        <div class="booking__head">
+                            <h2>Paket 1</h2>
+                        </div>
+                        <div class="booking__body">
+                            <form action="#">
+                                <div class="booking__group">
+                                    <div class="booking__flex">
+                                        <div class="margin-right">
+                                            <label class="display__block" for="checkin">Check in</label>
+                                            <input class="booking__date" type="date">
+                                        </div>
+                                        <div>
+                                            <label class="display__block" for="checkin">Check out</label>
+                                            <input class="booking__date" type="date">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="booking__group">
+                                    <div class="booking__flex">
+                                       <h2 class="margin-right">Inimeste arv</h2>
+                                       <input type="text" class="booking__count">
+                                    </div>
+                                    <div class="booking__flex">
+                                        <div class="booking__flex margin-right">
+                                            <label for="korraldajad">Korraldajad</label>
+                                            <button class="booking__countbtn">
+                                                <svg class="booking__countbtn--icon">
+                                                    <use xlink:href="img/sprite.svg#icon-minus-alt"></use>
+                                                </svg>
+                                            </button>
+                                            <span>0</span>
+                                            <button class="booking__countbtn">
+                                                <svg class="booking__countbtn--icon">
+                                                    <use xlink:href="img/sprite.svg#icon-plus-alt"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="booking__flex">
+                                            <label for="osajelad">Osalejad</label>
+                                            <button class="booking__countbtn">
+                                                <svg class="booking__countbtn--icon">
+                                                    <use xlink:href="img/sprite.svg#icon-minus-alt"></use>
+                                                </svg>
+                                            </button>
+                                            <span>0</span>
+                                            <button class="booking__countbtn">
+                                                <svg class="booking__countbtn--icon">
+                                                    <use xlink:href="img/sprite.svg#icon-plus-alt"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="booking__group">
+                                    <h2>Majutus</h2>
+                                    
+                                    <div class="booking__majutus">
+                                        <div class="booking__majutus--item">
+                                            <div class="booking__header">
+                                                <a href="#">Hotell 4</a>
+                                            </div>
+                                            <div class="booking__content">
+                                                <div class="booking__flex">
+                                                    <label class="margin-right" for="twin">Twin</label>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-minus-alt"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <span>0</span>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-plus-alt"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-image"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="booking__flex">
+                                                    <label class="margin-right" for="triple">Triple</label>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-minus-alt"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <span>0</span>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-plus-alt"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-image"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="booking__flex">
+                                                    <label class="margin-right" for="triple">Suite</label>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-minus-alt"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <span>0</span>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-plus-alt"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <button class="booking__countbtn">
+                                                        <svg class="booking__countbtn--icon">
+                                                            <use xlink:href="img/sprite.svg#icon-image"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                                <div class="booking__group">
+                                    <h2>Sportirajatised (max 2)</h2>
+                                    <div class="booking__checkboxes">
+                                        <div class="booking__flex">
+                                            <input class="booking__checkbox" type="checkbox">
+                                            <label for="rajatised">Korvpalliväljak</label>
+                                            <button class="booking__countbtn">
+                                                <svg class="booking__countbtn--icon">
+                                                    <use xlink:href="img/sprite.svg#icon-image"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        
+                                        <div class="booking__flex">
+                                            <input class="booking__checkbox"  type="checkbox">
+                                            <label for="rajatised">Jalgpalliväljak</label>
+                                            <button class="booking__countbtn">
+                                                <svg class="booking__countbtn--icon">
+                                                    <use xlink:href="img/sprite.svg#icon-image"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+
+                                        <div class="booking__flex">
+                                            <input class="booking__checkbox" type="checkbox">
+                                            <label for="rajatised">Vorkpalliväljak</label>
+                                            <button class="booking__countbtn">
+                                                <svg class="booking__countbtn--icon">
+                                                    <use xlink:href="img/sprite.svg#icon-image"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        
+                                        <div class="booking__flex">
+                                            <input class="booking__checkbox" type="checkbox">
+                                            <label for="rajatised">Kergejoustiku staadion</label>
+                                            <button class="booking__countbtn">
+                                                <svg class="booking__countbtn--icon">
+                                                    <use xlink:href="img/sprite.svg#icon-image"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="booking__group">
+                                    <h2>Toitlustus</h2>
+                                    <p>Hommiku, lõuna ja õhtusöök hinnasees</p>
+                                </div>
+                                <div class="booking__group">
+                                    <h2>Lisateenused</h2>
+                                    <div class="booking__flex">
+                                        <p class="margin-right">Sauna 1x</p>
+                                        <span class="booking__price">15€</span>
+                                    </div>
+                                </div>
+                                <div class="booking__group ">
+                                    <div class="booking__flex">
+                                        <h2 class="margin-right">Ööpäeva hind/inimene</h2>
+                                        <span class="booking__price">0€</span>
+                                    </div>
+                                </div>
+                                <div class="booking__group">
+                                    <div class="booking__flex">
+                                        <h2 class="margin-right">Kokku</h2>
+                                        <span class="booking__price">0€</span>
+                                    </div>
+                                </div>
+                                <div class="booking__request">
+                                    <a href="#">Broneeringu tühistamise tingimused </a>
+                                    <button class="booking__button">Request a booking</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div id="my-modal" class="modal">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2>Korvpallivaljak</h2>
+                    <span class="close">&times;</span>
+                  </div>
+                  <div class="modal-body">
+                    <div class="top-section">
+                        <div class="modal__flex">
+                            <div class="modal__img">
+                                <img class="modal__image" id="image-container" src="img/korv.jpg">
+                            </div>
+                            <div class="modal__desc">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint recusandae error molestias est a eius voluptatum perspiciatis, deserunt corporis aut necessitatibus maiores saepe iste. Itaque expedita ex inventore accusamus harum.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="modal__images">
+                            <img class="modal__image" onclick="change_img(this)" src="img/about.jpg"  alt="">
+                            <img class="modal__image" onclick="change_img(this)" src="img/bike.jpg" alt="">
+                            <img class="modal__image" onclick="change_img(this)" src="img/jalka.jpg" alt="">
+                            <img class="modal__image" onclick="change_img(this)" src="img/sport1.jpg" alt="">
+                            <img class="modal__image" onclick="change_img(this)" src="img/korv.jpg" alt="">
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    </main>
+    <footer class="footer" id="help">
+        <div class="row">
+            <div class="col-1-of-2">
+                <div class="footer__navigation">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Carrers</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Privacy policy</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+                        <li class="footer__item"><a href="http://heikikotsar.ikt.khk.ee/BYT-partner/BYT/index.html" class="footer__link">Become a partner</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-1-of-2">
+                <p class="footer__copyright">
+                    &copy; 2019 Book Your Training
+               </p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

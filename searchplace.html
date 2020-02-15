@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Heiki Kotsar">
+    <meta name="description" content="BookYourTraining">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BookYourTraining</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/icon-font.css">
+</head>
+<body class="bookview-body">
+    <header id="home">
+        <nav class="navigation">
+            <ul class="navigation__left">
+                <li class="navigation__item"><a href="#home" class="navigation__link">Home</a></li>
+                <li class="navigation__item"><a href="#about" class="navigation__link">About</a></li>
+                <li class="navigation__item"><a href="#product" class="navigation__link">Product</a></li>
+                <li class="navigation__item"><a href="#contact" class="navigation__link">Contact us</a></li>
+                <li class="navigation__item"><a href="#help" class="navigation__link">Help</a></li>
+            </ul>
+            <ul class="navigation__right">
+                <li class="navigation__item"><a href="signup.html" class="navigation__right__link">Sign up</a></li>
+                <li class="navigation__item"><a href="login.html" class="navigation__right__link">Log In</a></li>
+            </ul>
+            <span class="open-slide">
+                <a onclick="openSlideMenu()">
+                  <svg width="30" height="30">
+                      <path d="M0,5 30,5" stroke="#2998ff" stroke-width="5"/>
+                      <path d="M0,14 30,14" stroke="#2998ff" stroke-width="5"/>
+                      <path d="M0,23 30,23" stroke="#2998ff" stroke-width="5"/>
+                  </svg>
+                </a>
+            </span>
+            <div id="side-menu" class="side-nav">
+                <a class="btn-close" onclick="closeSlideMenu()">&times;</a>
+                <ul class="side-nav__list">
+                    <li class="side-nav__item"><a class="side-nav__link" href="#home">Home</a></li>
+                    <li class="side-nav__item"><a class="side-nav__link" href="#about">About</a></li>
+                    <li class="side-nav__item"><a class="side-nav__link" href="#product">Product</a></li>
+                    <li class="side-nav__item"><a class="side-nav__link" href="#contact">Contact us</a></li>
+                    <li class="side-nav__item"><a class="side-nav__link" href="#help">Help</a></li>
+                    <li class="side-nav__item2"><a class="side-nav__link2" href="login.html">Log In</a></li>
+                    <li class="side-nav__item2"><a class="side-nav__link2" href="signup.html">Sign Up</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="search-container">
+        <div class="search-itmes">
+            <div class="search">
+                <form action="#" class="search__bar">
+                    <input type="text" class="search__input" placeholder="Search places">
+                    <button class="search__button">
+                        <svg class="search__icon">
+                            <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+            <div class="flex">
+                <div class="search-sidenav">
+                    <nav class="search-nav">
+                        <ul>
+                            <li>
+                                <a class="search-nav__link" href="#">
+                                    <svg class="search-nav__icon">
+                                        <use xlink:href="img/sprite.svg#icon-home"></use>
+                                    </svg>
+                                </a>
+                                <a class="search-nav__link" href="#">
+                                    <svg class="search-nav__icon">
+                                        <use xlink:href="img/sprite.svg#icon-users"></use>
+                                    </svg>
+                                </a>
+                                <a class="search-nav__link" href="#">
+                                    <svg class="search-nav__icon">
+                                        <use xlink:href="img/sprite.svg#icon-add-to-list"></use>
+                                    </svg>
+                                </a>
+                                <a class="search-nav__link" href="#">
+                                    <svg class="search-nav__icon">
+                                        <use xlink:href="img/sprite.svg#icon-chat"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="book-place">
+                    <div class="book-place-cotaniner">
+                        <div class="place">
+                            <div class="place__item">
+                                <img class="place__img" src="img/jalka2.jpg">
+                                <h2>Sport Centre</h2>
+                                <a class="details btn--blue" href="bookview.html">Details</a>
+                            </div>
+                            <div class="place__item">
+                                <img class="place__img" src="img/korv.jpg">
+                                <h2>Sport Centre</h2>
+                                <a class="details btn--blue" href="bookview.html">Details</a>
+                            </div>
+                            <div class="place__item">
+                                <img class="place__img" src="img/sport2.jpg">
+                                <h2>Sport Centre</h2>
+                                <a class="details btn--blue" href="bookview.html">Details</a>
+                            </div>
+                            <div class="place__item">
+                                <img class="place__img" src="img/tennis.jpg">
+                                <h2>Sport Centre</h2>
+                                <a class="details btn--blue" href="bookview.html">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>

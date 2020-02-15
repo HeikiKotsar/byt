@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Heiki Kotsar">
+    <meta name="description" content="BookYourTraining">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BookYourTraining</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/icon-font.css">
+</head>
+<body>
+    <header id="home">
+        <nav class="navigation">
+            <ul class="navigation__left">
+                <li class="navigation__item"><a href="#home" class="navigation__link">Home</a></li>
+                <li class="navigation__item"><a href="#about" class="navigation__link">About</a></li>
+                <li class="navigation__item"><a href="#product" class="navigation__link">Product</a></li>
+                <li class="navigation__item"><a href="#contact" class="navigation__link">Contact us</a></li>
+                <li class="navigation__item"><a href="#help" class="navigation__link">Help</a></li>
+            </ul>
+            <ul class="navigation__right">
+                <li class="navigation__item"><a href="signup.html" class="navigation__right__link">Sign up</a></li>
+                <li class="navigation__item"><a href="login.html" class="navigation__right__link">Log In</a></li>
+            </ul>
+            <span class="open-slide">
+                <a onclick="openSlideMenu()">
+                  <svg width="30" height="30">
+                      <path d="M0,5 30,5" stroke="#2998ff" stroke-width="5"/>
+                      <path d="M0,14 30,14" stroke="#2998ff" stroke-width="5"/>
+                      <path d="M0,23 30,23" stroke="#2998ff" stroke-width="5"/>
+                  </svg>
+                </a>
+            </span>
+            <div id="side-menu" class="side-nav">
+                <a class="btn-close" onclick="closeSlideMenu()">&times;</a>
+                <ul class="side-nav__list">
+                    <li class="side-nav__item"><a class="side-nav__link" href="#home">Home</a></li>
+                    <li class="side-nav__item"><a class="side-nav__link" href="#about">About</a></li>
+                    <li class="side-nav__item"><a class="side-nav__link" href="#product">Product</a></li>
+                    <li class="side-nav__item"><a class="side-nav__link" href="#contact">Contact us</a></li>
+                    <li class="side-nav__item"><a class="side-nav__link" href="#help">Help</a></li>
+                    <li class="side-nav__item2"><a class="side-nav__link2" href="login.html">Log In</a></li>
+                    <li class="side-nav__item2"><a class="side-nav__link2" href="signup.html">Sign Up</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="banner">
+            <div class="banner__text-box">
+                <h1 class="heading-primary u-margin-bottom-small">
+                    <span class="heading-primary--main">We make organizing and booking a sports events effortless</span>
+                    <span class="heading-primary--sub">Our goal is to make sports event booking, organizing and managing, as simple as possible.
+                        No more countless phone calls, emails and excel files.
+                    </span>
+                </h1>
+    
+                <div class="col-1-of-2">
+                    <a href="signup.html" class="btn btn--green btn--animated">Get Started</a>
+                </div>
+            </div>
+            <div class="scroll">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </section>
+        <section class="section-about" id="about">
+            <div class="u-center-text ">
+                <h2 class="heading-secondary u-margin-bottom-medium">About us</h2>
+            </div>
+            <div class="row">
+                <div class="col-1-of-2">
+                    <p class="paragraph">
+                        BYT is a startup company where you can book training camps and sports facilities for different types of sport events. Event organizers can make a user and use our event management systems to create events, search and book our partner, and manage the whole process - everything that an event manager needs.
+                    </p> <br>
+                    <p class="paragraph">
+                        Intention of this part is to make Camp booking easier and quicker. BYT is reserved for trainers/coaches only. It’s a tool that makes their camp bookings and event organizing  easier.
+                    </p> <br>
+                    <p class="paragraph">
+                        It’s a complex system that will allow a trainer to book their camp within minutes. Platform will provide the possibility to set up a camp from camp site selection up to accommodation and catering services.
+                    </p>
+                </div>
+                <div class="col-1-of-2">
+                    <div class="about">
+                        <img src="img/about2.jpg" class="about__image about__image--p1" alt="about">
+                    </div>
+                </div> 
+            </div>
+        </section>
+        <section class="section-features" id="product">
+                <div class="u-center-text ">
+                    <h2 class="heading-secondary">One platform to book, organize and create any sports event</h2>
+                    <h3 class="heading-tertiary u-margin-bottom-medium">Save your time and energy and use it on things that matter</h3>
+                </div>
+                <div class="boxes u-center-text">
+                    <div class="feature-box">
+                        <img src="img/find.png" alt="speech">
+                        <h3 class="heading-tertiary">Search and find places/venues to hold your event
+                        </h3>
+                        <p class="paragraph">Filter what type of places you need and find the best service providers
+                        </p>
+                    </div>
+                    <div class="feature-box">
+                        <img class="feature-box" src="img/checked.png" alt="speech">
+                        <h3 class="heading-tertiary">Make bookings based on your needs
+                        </h3>
+                        <p class="paragraph">Create an account, organize and create events
+                        </p>
+                    </div>
+                    <div class="feature-box">
+                        <img src="img/network.png" alt="speech">
+                        <h3 class="heading-tertiary">Manage the whole process on the go
+                        </h3>
+                        <p class="paragraph">Have a full overview of the events progress
+                        </p>
+                    </div>
+                    <div class="feature-box">
+                        <img src="img/speech-bubble.png" alt="speech">
+                        <h3 class="heading-tertiary">All communications in one place
+                        </h3>
+                        <p class="paragraph">Message with participants and get in touch with service providers
+                        </p>
+                    </div>
+                    <div class="feature-box">
+                        <img src="img/list.png" alt="speech">
+                        <h3 class="heading-tertiary">Task managing boards for different events
+                        </h3>
+                        <p class="paragraph">Create to-do lists, upload and create new documents
+                        </p>
+                    </div>
+                    <a href="signup.html" class="btn btn--green">Get Started</a>
+                </div>
+        </section>
+        <section class="section-contact" id="contact">
+            <div class="contact">
+                <div class="contact__form u-center-text">
+                    <form action="#" class="form">
+                            <div class="u-center-text ">
+                                <h2 class="heading-secondary u-margin-bottom-medium">Contact us</h2>
+                            </div>
+                            <div class="form__container">
+
+                                <input type="email" class="form__input" placeholder="Email" id="email" required>
+                                <!-- <label for="email" class="form__label">Email</label> -->
+                            
+                                <input type="text" class="form__input" placeholder="Name" id="name" required>
+                                <!-- <label for="name" class="form__label">Name</label> -->
+                            </div>
+                            </div>
+
+                            <div class="form__group">
+                                <textarea class="form__text" name="message" placeholder="Message" id="message" cols="55" rows="10"></textarea>
+                                <label for="message"></label>
+                            </div>
+                            <div class="form__group">
+                                <a href="#" class="btn btn--blue">Send</a>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer" id="help">
+        <div class="row">
+            <div class="col-1-of-2">
+                <div class="footer__navigation">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Carrers</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Privacy policy</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+                        <li class="footer__item"><a href="http://heikikotsar.ikt.khk.ee/BYT-partner/BYT/index.html" class="footer__link">Become a partner</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-1-of-2">
+                <p class="footer__copyright">
+                    &copy; 2019 Book Your Training
+               </p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

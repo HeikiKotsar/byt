@@ -1,0 +1,90 @@
+.contact {
+    background-color: $color-grey-light;
+    padding: 3.5rem 1rem;
+    max-width: 45%;
+    height: auto;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+
+    text-align: center;
+
+    @include respond(tab-port) {
+        max-width: 65%;
+    }
+
+    @include respond(phone) {
+        max-width: 83%;
+        padding: 3rem 1rem;
+    }
+}
+
+.form {
+    &__container {
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        @include respond(tab-port) {
+            flex-wrap: wrap;
+        }
+        
+    }
+
+    &__input {
+        border-radius: 2px;
+        background-color: $color-white;
+        padding: 1.2rem 1rem;
+        border: none;
+        border-bottom: 2px solid $primary-color;
+        width: 40%;
+        margin: 1rem 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        @include respond(tab-port) {
+            margin-bottom: 2rem;
+        }
+
+        @include respond(phone) {
+            width: 30rem;
+        }
+        
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-black, .1);
+            border-bottom: 3px solid $color-green-primary;
+
+            &:invalid {
+                border-bottom: 3px solid $color-orange;
+            }
+        }
+    }
+
+
+    &__text {
+        border-radius: 2px;
+        padding: 1.2rem 1rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        width: 90%;
+        border: none;
+        border-bottom: 2px solid $primary-color;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-black, .1);
+            border-bottom: 3px solid $color-green-primary;
+        }
+
+        @include respond(phone) {
+            width: 30rem;
+            margin-top: 1rem;
+            height: 20rem;
+        }
+    }
+
+}

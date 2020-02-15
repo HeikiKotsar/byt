@@ -1,0 +1,190 @@
+.sign-form {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80rem;
+    min-height: 30rem;
+    background-color: $color-grey-light-2;
+    box-shadow: 0 1.5rem 5rem rgba($color-black, .5);
+
+    
+    border-radius: 10px;
+
+    &__head {
+        padding: 1.5rem 1rem;
+        background-color: $primary-color;
+        text-align: center;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+        &--icon {
+            width: 4rem;
+            height: 4rem;
+            fill: #fff;
+        }
+
+        &--text {
+            font-size: 1.8rem;
+            color: #fff;
+        }
+    }
+
+    &__body {
+        padding: 1rem 2rem;
+    }
+
+    &__group {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__label {
+        display: block;
+        font-size: 1.5rem;
+        margin-left: .3rem;
+        font-weight: bold;
+    }
+
+    &__heading {
+        display: block;
+        margin-top: 1rem;
+    }
+
+    &__input-box {
+        position: relative;
+        margin: 5px 0;
+        // display: flex;
+        // align-items: center;
+
+        input {
+            width: 30rem;
+            font-size: 1.6rem;
+            border: none;
+            border-bottom: 2px solid $primary-color;
+            outline: none;
+            padding: 10px;
+            border-radius: 4px;
+            // padding-left: 2.5rem;
+            box-sizing: border-box;
+
+            &:focus {
+                border-bottom: 2px solid $color-green-primary;
+
+                &:invalid {
+                    border-bottom: 3px solid $color-orange;
+                }
+            }
+        }
+
+        select {
+            width: 30rem;
+            font-size: 1.6rem;
+            border: none;
+            border-bottom: 2px solid $primary-color;
+            outline: none;
+            padding: 10px;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    }
+    
+
+    &__google {
+        background: none;
+        border: none;
+        
+        cursor: pointer;
+        &--icon {
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+
+    &__agree {
+        display: flex;
+        align-items: center;
+        margin: 1rem 0rem;
+    }
+
+    &__last {
+        margin-top: 3rem;
+    }
+
+    
+    &__btn {
+        margin-right: 2rem;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        padding: .5rem 1.5rem;
+        background: $primary-color;
+        border-radius: 1rem;
+        transition: all .2s;
+        cursor: pointer;
+        text-decoration: none;
+        color: #fff;
+
+        float: right;
+       
+    }
+
+    &__later {
+        margin-left: 5rem;
+        font-size: 1.4rem;
+        text-decoration: none;
+        color: $primary-color;
+    }
+
+}
+
+///////////////////////////////////////////////////
+// LOGIN FORM
+
+.login-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35rem;
+    min-height: 30rem;
+    background-color: $color-grey-light-2;
+    box-shadow: 0 1.5rem 5rem rgba($color-black, .5);
+    padding: 5rem;
+    border-radius: 3px;
+
+    &__input-box {
+        position: relative;
+        margin: 20px 0;
+        // display: flex;
+        // align-items: center;
+
+        input {
+            width: 100%;
+            font-size: 1.6rem;
+            border: none;
+            border-bottom: 2px solid $primary-color;
+            outline: none;
+            padding: 10px;
+            padding-left: 2.5rem;
+            box-sizing: border-box;
+
+            &:focus {
+                outline: none;
+                border-bottom: 2px solid $color-green-primary;
+                box-shadow: 0 1rem 2rem rgba($color-black, .3);
+
+                &:invalid {
+                    border-bottom: 3px solid $color-orange;
+                }
+            }
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        height: 2.1rem;
+        width: 2.1rem;
+        top: .8rem;
+        left: .1rem;
+    }
+}

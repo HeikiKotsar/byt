@@ -1,0 +1,387 @@
+.bookview-body {
+    background-color: #eee;
+}
+
+.book-container {
+    width: 120rem;
+    margin: 0rem auto;
+    
+} 
+
+
+.bookview {
+
+    &__banner {
+        display: flex;
+    }
+
+    &__head {
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        
+        margin-top: -.4rem;
+    }
+
+    &__nav {
+        
+        &--list {
+            display: flex;
+            align-items: center;
+            list-style: none;
+        }
+
+        &--item {
+            margin-right: 2rem;
+            font-size: 1.5rem;
+            padding: .5rem 1.5rem;
+            background: $primary-color;
+            border-radius: 1rem;
+            transition: all .2s;
+            cursor: pointer;
+
+            &:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 10rem 20rem rgba($color-black,.2);
+            }
+
+            a {
+                text-decoration: none;
+                color: #fff;
+                
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        padding: 3rem;
+    }
+
+    &__desc {
+        flex: 0 0 65%;
+        height: 20rem;
+        margin-right: 4.5rem;
+        background-color: #fff;
+        box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+    }
+
+    &__header {
+        padding: 1.5rem;
+        border-bottom: 2px solid $primary-color;
+    }
+
+    &__body {
+        padding: 1.5rem;
+    }
+
+    &__reserv {
+        flex: 1;
+        height: 20rem;
+        background-color: #fff;
+        box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+        padding: 1.5rem;
+    }
+
+    &__reviews {
+        flex: 1;
+        height: 35rem;
+        background-color: #fff;
+        margin-left: 4.5rem;
+        box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+    }
+
+}
+
+// .rating {
+//     background-color: $primary-color;
+//     color: #fff;
+//     margin-top: -.1rem;
+//     padding: 0 2.2rem;
+//     display: flex;
+//     align-self: stretch;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     font-size: 2rem;
+// }
+
+.heading {
+    font-size: 2rem;
+    padding: 1rem;
+    margin-left: 1rem;
+}
+
+.heading-2 {
+
+    padding: 1rem;
+}
+
+.book-img {
+    height: 30rem;
+    width: 100%;
+}
+
+.heading {
+    margin-right: auto;
+}
+
+// booking
+
+.booking {
+    &__custom {
+        
+        flex: 0 0 37%;
+        margin-right: 5rem;
+        
+    }
+
+    &__head {
+        text-align: center;
+    }
+
+    &__body {
+        margin-top: 1rem;
+        background-color: #fff;
+        height: auto;
+        border-radius: 5px;
+        padding: 1rem 0rem;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+    }
+
+    &__pakett {
+        flex: 0 0 37%;
+        
+    }
+
+    &__flex {
+        display: flex;
+        align-items: center;
+    }
+
+    &__group {
+        width: 35rem;
+        margin: 1rem auto;
+        border-bottom: 2px solid #eee;
+        font-size: 1.5rem;
+
+        h2 {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__count {
+        width: 4.5rem;
+        margin-bottom: .5rem;
+        border-radius: 5px;
+        border: none;
+        background-color: #eee;
+        padding: .5rem;
+        outline: none;
+        text-align: center;
+    }
+
+    &__countbtn {
+        border-radius: 5px;
+        border: none;
+        background: none;
+        margin: 0rem .5rem;
+        outline: none;
+        cursor: pointer;
+
+        &--icon {
+            height: 1.8rem;
+            width: 1.8rem;
+            fill: $color-green-primary;
+        }
+    }
+
+    &__check {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    &__checkboxes {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    &__checkbox {
+        margin-right: .3rem;
+    }
+
+    &__date {
+        width: 14rem;
+        margin-bottom: .5rem;
+        border-radius: 5px;
+        border: none;
+        background-color: #eee;
+        padding: .5rem;
+        outline: none;
+    }
+
+    &__button {     
+        font-size: 1.5rem;
+        padding: .5rem 1.5rem;
+        background: $color-green-primary;
+        color: #fff;
+        border: none;
+        border-radius: 1rem;
+        transition: all .2s;
+        cursor: pointer;
+
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10rem 20rem rgba($color-black,.2);
+        }
+    }
+
+    &__request {
+        display: flex;
+        align-items: center;
+       justify-content: space-around;
+    }
+
+    &__price {
+        font-weight: bold;
+    }
+
+
+    &__majutus {
+        display: grid;
+        grid-template-columns: auto auto;
+
+        &--item {
+            margin: .2rem;
+            width: 14rem;
+        }
+    }
+
+    
+
+    &__header {
+        text-align: center;
+        margin-bottom: .5rem;
+    }
+
+}
+
+.margin-right {
+    margin-right: auto;
+}
+
+.display__block {
+    display: block;
+}
+
+// MODAL START
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+
+
+    &__img {
+        flex: 0 0 50%;
+    }
+
+    &__desc {
+        margin-left: 2rem;
+        flex: 0 0 50%;
+    }
+
+    &__flex {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.modal-content {
+    margin: 10% auto;
+    width: 90rem;
+    background-color: #fff;
+    animation-name: modalopen;
+    animation-duration: 1s;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.modal-header {
+    background: $primary-color;
+    padding: 0rem 2rem;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    display: flex;
+    align-items: center;
+}
+
+.modal-body {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    
+   
+}
+
+
+.close {
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+    color: #fff;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+@keyframes modalopen {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+// MODAL END
+
+.top-section{
+    height: auto;
+   
+    overflow: hidden;
+    background: #fff;
+    position: relative;
+}
+
+#image-container{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.modal__images{
+    text-align: center;
+}
+
+.modal__images img{
+    width: 80px;
+    height: 50px;
+    border-radius: 5px;
+    margin: 8px 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}

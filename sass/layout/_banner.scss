@@ -1,0 +1,17 @@
+.banner {
+    height: 100vh;
+    background-image: linear-gradient(
+        to right top, 
+        rgba($color-grey-dark-2, 0.8), 
+        rgba($color-grey-dark-3, 0.8)), 
+        url(../img/sport2.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+
+
+    &__text-box {
+        @include absCenter;
+        text-align: center;
+    }
+}

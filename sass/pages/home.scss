@@ -1,0 +1,60 @@
+.section-about {
+    background-color: $color-grey-light;
+    padding: 15rem 0;
+
+    // @include respond(tab-port) {
+    //     padding: 20rem 0;
+    // }
+    @include respond(phone) {
+        padding: 10rem 0;
+    }
+}
+
+.section-features {
+    
+    padding: 10rem 0;
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($color-grey-dark-2, 0.8), 
+        rgba($color-grey-dark-3, 0.8)), 
+        url(../img/sport3.jpg);
+    background-size: cover;
+
+    @include respond(phone) {
+        padding: 10rem 0;
+    }
+}
+
+.section-contact {
+    padding: 15rem 0;
+    background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+    
+    @include respond(phone) {
+        padding: 10rem 0;
+    }
+}
+
+.section-login {
+    
+    height: 100vh;
+    background-image: linear-gradient(
+        to right top, 
+        rgba($color-grey-dark-2, 0.8), 
+        rgba($color-grey-dark-3, 0.8)), 
+        url(../img/sport2.jpg);
+    background-size: cover;
+    // background-position: top;
+    
+    // &:before {
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     right: 0;
+    //     width: 30%;
+    //     height: 100vh;
+    //     background-color: $primary-color;
+    //     opacity: 0.7;
+    // }
+}
+
+
