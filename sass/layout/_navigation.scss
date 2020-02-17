@@ -4,7 +4,7 @@
 
     display: flex;
     align-items: center;
-    
+    height: 6rem;
     padding: 2rem 2rem;
     position: fixed;
     z-index: 100;
@@ -50,7 +50,7 @@
         &__link {
             text-decoration: none;
             color: $primary-color;
-            padding: 1rem 1.5rem;
+            padding: .7rem 1.2rem;
             margin-left: 2rem;
             border: 1.2px solid $primary-color;
             border-radius: 5rem;
