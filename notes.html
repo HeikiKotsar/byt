@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Heiki Kotsar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin dashboard</title>
+    <link rel="shortcut icon" type="image/jpg" href="img/HK_Logo.jpg">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+    <div class="content">
+        <div class="dashboard">
+            <div class="dashboard__profile">
+                <a href="account-details.html">
+                    <svg class="dashboard__profile--icon">
+                        <use xlink:href="img/sprite.svg#icon-user-circle-o1"></use>
+                    </svg>
+                </a>
+            </div>
+            <nav class="dashboard__sidebar">
+                <ul class="dashboard__nav">
+                    <li class="dashboard__nav--item">
+                        <a href="homepage.html" class="dashboard__nav--link">
+                            <svg class="dashboard__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-home"></use>
+                            </svg>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="dashboard__nav--item">
+                        <a href="providers.html" class="dashboard__nav--link">
+                            <svg class="dashboard__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-soccer-court"></use>
+                            </svg>
+                            <span>Find service providers</span>
+                        </a>
+                    </li>
+                    <li class="dashboard__nav--item">
+                        <a href="#" class="dashboard__nav--link">
+                            <svg class="dashboard__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-folder-open"></use>
+                            </svg>
+                            <span>Documents</span>
+                        </a>
+                    </li>
+                    <li class="dashboard__nav--item">
+                        <a href="#" class="dashboard__nav--link">
+                            <svg class="dashboard__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-chat"></use>
+                            </svg>
+                            <span>Chats</span>
+                        </a>
+                    </li>
+                    <li class="dashboard__nav--item">
+                        <a href="#" class="dashboard__nav--link">
+                            <svg class="dashboard__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-calculator"></use>
+                            </svg>
+                            <span>Boards</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <p class="dashboard__copy">Book Your Training</p>
+        </div>
+
+        <div id="my-modal" class="note__modal">
+            <div class="note__modal--content">
+                <div class="note__modal--header">
+                    <input type="text" placeholder="Type note heading">
+                    <span class="note__close">&times;</span>
+                </div>
+                <div class="note__modal--body">
+                    <textarea name="notetext" id="" cols="30" rows="10" placeholder="Write notes"></textarea>
+                </div>
+            </div>
+        </div>
+        
+        <div class="event">
+            <header class="event__header">
+                <div class="event__form">
+                    <h2 class="event__name">Event Name</h2>
+                    <div class="event__flex">
+                        <p>From: 15.02.20</p>
+                        <p>Until: 15.02.20</p>
+                    </div>
+                </div>
+                <div class="event__flex">
+                    <nav class="event__nav">
+                        <ul>
+                           <li ><a href="dashboard.html">
+                            <svg class="event__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-calculator"></use>
+                            </svg>
+                            Dashboard</a></li>
+                           <li><a href="tasks.html">
+                            <svg class="event__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-list"></use>
+                            </svg>
+                            Tasks</a></li>
+                           <li class="event__active"><a href="notes.html">
+                            <svg class="event__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-notes"></use>
+                            </svg>
+                               Notes</a></li>
+                            <li><a href="people.html">
+                                <svg class="event__nav--icon">
+                                    <use xlink:href="img/sprite.svg#icon-users"></use>
+                                </svg>
+                                People</a></li>
+                            <li><a href="#">
+                                <svg class="event__nav--icon">
+                                    <use xlink:href="img/sprite.svg#icon-folder-open"></use>
+                                </svg>
+                                Files</a></li>     
+                        </ul>
+                    </nav>
+                    <div class="event__flex">
+
+                    </div>
+                </div>
+            </header>
+                <a class="note__add" id="modal-btn">Add note
+                    <svg class="create-event__btn--icon">
+                        <use xlink:href="img/sprite.svg#icon-plus-alt"></use>
+                    </svg>
+                </a>
+                <div class="note">
+                    <div class="note__body">
+                        <div class="note__list">
+                            <div class="note__item">
+                                <h4>Note 1</h4>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam suscipit molestiae totam possimus omnis aspernatur iusto magni eaque velit perspiciatis eveniet sequi nemo autem eius quam voluptatem dolore eos quos, repellat at fugit? Iusto minus repudiandae ab veritatis possimus corrupti!</p>
+                                <a class="note__item--link" href="#">View note</a>
+                            </div>
+                            <div class="note__item">
+                                <h4>Note 2</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae cupiditate excepturi recusandae velit optio, facilis aliquid temporibus illo maiores ut?</p>
+                                <a class="note__item--link" href="#">View note</a>
+                            </div>
+                            <div class="note__item">
+                                <h4>Note 2</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum harum corporis dolores. Quis rerum nobis quia, numquam voluptatum fugit quaerat est obcaecati nisi! Quidem rerum dolorum hic obcaecati mollitia! Dolorem dolores quisquam consequatur sequi non corporis dolore facilis enim quam.</p>
+                                <a class="note__item--link" href="#">View note</a>
+                            </div>
+                            <div class="note__item">
+                                <h4>Note 2</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum harum corporis dolores. uaerat est obcaecati nisi! Quidem rerum dolorum hic obcaecati mollitia! Dolorem dolores quisquam consequatur sequi non corporis dolore facilis enim quam.</p>
+                                <a class="note__item--link" href="#">View note</a>
+                            </div>
+                            <div class="note__item">
+                                <h4>Note 2</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum harum corporis dolores. Quis rerum nobis quia</p>
+                                <a class="note__item--link" href="#">View note</a>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/modal.js"></script>
+</body>
+</html>

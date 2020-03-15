@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Heiki Kotsar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin dashboard</title>
+    <link rel="shortcut icon" type="image/jpg" href="img/HK_Logo.jpg">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+    <div class="content">
+        <div class="dashboard">
+            <div class="dashboard__profile">
+                <a href="account-details.html">
+                    <svg class="dashboard__profile--icon">
+                        <use xlink:href="img/sprite.svg#icon-user-circle-o1"></use>
+                    </svg>
+                </a>
+            </div>
+            <nav class="dashboard__sidebar">
+                <ul class="dashboard__nav">
+                    <li class="dashboard__nav--item">
+                        <a href="homepage.html" class="dashboard__nav--link">
+                            <svg class="dashboard__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-home"></use>
+                            </svg>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="dashboard__nav--item">
+                        <a href="providers.html" class="dashboard__nav--link">
+                            <svg class="dashboard__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-soccer-court"></use>
+                            </svg>
+                            <span>Find service providers</span>
+                        </a>
+                    </li>
+                    <li class="dashboard__nav--item">
+                        <a href="#" class="dashboard__nav--link">
+                            <svg class="dashboard__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-folder-open"></use>
+                            </svg>
+                            <span>Documents</span>
+                        </a>
+                    </li>
+                    <li class="dashboard__nav--item">
+                        <a href="#" class="dashboard__nav--link">
+                            <svg class="dashboard__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-chat"></use>
+                            </svg>
+                            <span>Chats</span>
+                        </a>
+                    </li>
+                    <li class="dashboard__nav--item">
+                        <a href="#" class="dashboard__nav--link">
+                            <svg class="dashboard__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-calculator"></use>
+                            </svg>
+                            <span>Boards</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <p class="dashboard__copy">Book Your Training</p>
+        </div>
+        
+        <div class="event">
+            <header class="event__header">
+                <div class="event__form">
+                    <input class="event__form--input" type="text" placeholder="Type event name">
+                    <div class="event__flex">
+                        <p>From: 15.02.20</p>
+                        <p>Until: 15.02.20</p>
+                    </div>
+                </div>
+                <div class="event__flex">
+                    <nav class="event__nav">
+                        <ul>
+                           <li class="event__active"><a href="dashboard.html">
+                            <svg class="event__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-calculator"></use>
+                            </svg>
+                            Dashboard</a></li>
+                           <li><a href="tasks.html">
+                            <svg class="event__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-list"></use>
+                            </svg>
+                            Tasks</a></li>
+                           <li><a href="notes.html">
+                            <svg class="event__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-notes"></use>
+                            </svg>
+                               Notes</a></li>
+                            <li><a href="people.html">
+                                <svg class="event__nav--icon">
+                                    <use xlink:href="img/sprite.svg#icon-users"></use>
+                                </svg>
+                                People</a></li>
+                            <li><a href="people.html">
+                                <svg class="event__nav--icon">
+                                    <use xlink:href="img/sprite.svg#icon-folder-open"></use>
+                                </svg>
+                                Files</a></li>     
+                        </ul>
+                    </nav>
+                    <div class="event__flex">
+                        
+                    </div>
+                </div>
+            </header>
+           <div class="event__container">
+                <div class="event__body">
+                    <div class="event__about">
+                        <h2>About the event</h2>
+                        <textarea name="about" id="" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="event__budget">
+                        <h2>Budget</h2>
+                        <div class="event__budget--body">
+                            <div class="event__budget--total">
+                                <p>Limit total</p>
+                                <span>10 000€</span>
+                            </div>
+                            <div class="event__budget--total">
+                                <p>Limit per person</p>
+                                <span>150€</span>
+                            </div>
+                            <div class="event__budget--total">
+                                <p>Currently</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event__providers">
+                        <h2>Service providers</h2>
+                        <div class="event__providers--body">
+                            <div class="event__providers--item">
+                                <svg class="event__providers--icon">
+                                    <use xlink:href="img/sprite.svg#icon-checkmark"></use>
+                                </svg>
+                                <p>Spordirajatis  -  Kääriku Spordikeskus </p>
+                            </div>
+                            <div class="event__providers--item">
+                                <svg class="event__providers--icon">
+                                    <use xlink:href="img/sprite.svg#icon-checkmark"></use>
+                                </svg>
+                                <p>Mingi toitlustus service</p>
+                            </div>
+                            <div class="event__providers--item">
+                                <svg class="event__providers--icon">
+                                    <use xlink:href="img/sprite.svg#"></use>
+                                </svg>
+                                <p>Mingi majutusasutus</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event__people">
+                        <h2>People</h2>
+                        <div class="event__people--body">
+                            <div class="event__people--count">
+                                <div class="event__people--item">
+                                    <p class="coming">Coming</p>
+                                    <span>14/20</span>
+                                </div>
+                                <div class="event__people--item">
+                                    <p class="declined">Declined</p>
+                                    <span>14/20</span>
+                                </div>
+                                <div class="event__people--item">
+                                    <p class="unknown">Unknown</p>
+                                    <span>14/20</span>
+                                </div>
+                                <div class="event__people--item">
+                                    <p class="admins">Admins</p>
+                                    <span>14/20</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="event__registred">
+                    <div class="event__registred--item">
+                        <div class="event__registred--month">
+                            <span>Jan 1</span>
+                        </div>
+                        <div class="event__registred--memb">
+                            <p>10 of your team members have registered </p>
+                        </div>  
+                    </div>
+                    <div class="event__registred--item">
+                        <div class="event__registred--month">
+                            <span>Apr 4</span>
+                        </div>
+                        <div class="event__registred--memb">
+                            <p>5 of your team members have registered </p>
+                        </div>  
+                    </div>
+                </div>
+           </div>
+        </div>
+    </div>
+</body>
+</html>
