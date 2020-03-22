@@ -535,7 +535,37 @@ body {
       cursor: pointer; }
 
 .upcoming {
-  margin-top: 5rem; }
+  margin-top: 1rem; }
+
+.feed__container {
+  padding: 1rem 2rem; }
+  .feed__container p {
+    font-size: 1.5rem; }
+
+.feed__text {
+  display: flex;
+  align-items: center; }
+  .feed__text p {
+    margin-left: 1rem; }
+  .feed__text span {
+    font-size: 1.5rem;
+    margin-left: auto;
+    margin-right: 15rem; }
+
+.feed__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 1.2rem;
+  margin: 1rem auto;
+  box-shadow: 0 -1px 0 #e5e5e5, 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24); }
+
+.feed__select {
+  padding: .2rem 1rem;
+  border-radius: 5px;
+  outline: none; }
 
 .event {
   display: flex;
@@ -565,10 +595,17 @@ body {
       padding: .5rem .2rem;
       outline: none;
       border: none;
-      width: 35rem; }
+      width: 25rem; }
       .event__form--input::placeholder {
         color: #154782;
         font-size: 2rem; }
+    .event__form--btn {
+      background-color: #00CF15;
+      padding: .5rem 1rem;
+      border: none;
+      border-radius: 15px;
+      color: #fff;
+      cursor: pointer; }
     .event__form input[type="text"] {
       font-size: 2rem;
       color: #154782; }
@@ -708,17 +745,23 @@ body {
   margin-top: 12rem;
   background: #eee; }
   .tasks__list {
-    margin: 5rem 7rem; }
+    margin: 5rem 4rem;
+    width: 80%; }
   .tasks__item {
     display: flex;
     align-items: center;
     background: #fff;
+    border-radius: 5px;
+    padding: 0rem 1rem;
+    margin-bottom: 1rem;
     height: auto; }
     .tasks__item p {
-      width: 50rem;
-      font-size: 1.5rem; }
+      width: 50%;
+      font-size: 1.5rem;
+      padding: .5rem;
+      margin-right: auto; }
     .tasks__item input {
-      margin: 0rem 2rem; }
+      margin: 0rem 1rem; }
   .tasks__owner {
     padding: .5rem 1rem;
     background: #ddd;
@@ -731,9 +774,46 @@ body {
     align-items: center;
     padding: .5rem 1rem;
     border: 100%; }
+    .tasks__group span {
+      font-size: 1.2rem; }
   .tasks__icon {
     height: 2.5rem;
     width: 2.5rem; }
+  .tasks__inputdate {
+    width: 13rem; }
+  .tasks__status {
+    background: #2998ff;
+    color: #fff;
+    padding: .5rem 1.5rem;
+    border-radius: 20px; }
+    .tasks__status--2 {
+      height: 3rem;
+      width: 6rem;
+      background-color: #ddd;
+      border-radius: 20px; }
+  .tasks__date {
+    padding: .4rem;
+    font-size: 1.5rem; }
+  .tasks__red {
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: red;
+    border-radius: 50px;
+    margin: .2rem; }
+  .tasks__grey {
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: #ddd;
+    border-radius: 50px;
+    margin: .2rem; }
+  .tasks__button {
+    margin-top: .8rem;
+    border: none;
+    background-color: #fff;
+    cursor: pointer; }
+    .tasks__button--icon {
+      height: 2.5rem;
+      width: 2.5rem; }
 
 .note {
   background: #eee; }
@@ -849,6 +929,27 @@ body {
       width: 100%;
       background: #fff;
       box-shadow: 0 -1px 0 #e5e5e5, 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24); }
+    .people__item--btn {
+      margin-top: .5rem;
+      margin-left: 1rem;
+      background-color: #fff;
+      border: none;
+      cursor: pointer; }
+    .people__item--icon {
+      height: 1.5rem;
+      width: 1.5rem;
+      fill: #154782; }
+    .people__item--option {
+      margin-top: .5rem;
+      margin-right: .5rem;
+      margin-bottom: 1rem;
+      float: right; }
+    .people__item--select {
+      width: 7rem;
+      outline: none; }
+      .people__item--select--2 {
+        width: 12.8rem;
+        outline: none; }
   .people__add {
     display: flex;
     align-items: center;
@@ -873,7 +974,7 @@ body {
       margin-right: .7rem;
       fill: #FF4136; }
   .people__names {
-    margin: 1.5rem 2rem;
+    margin: 1rem 2rem;
     padding: 1rem 0rem; }
   .people__name {
     display: flex;
@@ -881,6 +982,136 @@ body {
     font-size: 1.4rem; }
     .people__name input {
       margin-right: 1rem; }
+
+.chat {
+  display: flex;
+  height: auto; }
+  .chat__sidebar {
+    flex: 0 0 20%;
+    flex-direction: column;
+    background-color: #003B81; }
+  .chat__content {
+    flex: 1;
+    background-color: #fff;
+    flex-direction: column;
+    height: 60rem;
+    display: flex;
+    font-size: 1.5rem; }
+  .chat__header {
+    padding: 1.5rem 1rem;
+    background-color: #2998ff;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; }
+    .chat__header ul {
+      display: flex;
+      align-items: center;
+      list-style: none; }
+    .chat__header li {
+      margin: 0rem 1rem; }
+    .chat__header a {
+      text-decoration: none;
+      color: #fff; }
+  .chat__area {
+    margin: 2rem;
+    height: 40rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column-reverse; }
+    .chat__area--you {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      margin: .5rem 0rem;
+      margin-left: 25rem; }
+      .chat__area--you p {
+        background: #2998ff;
+        padding: .2rem 1rem;
+        border-radius: 10px;
+        color: #eee; }
+    .chat__area--client {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      margin: .2rem 0rem;
+      margin-right: 25rem; }
+      .chat__area--client p {
+        background: #ddd;
+        padding: .5rem 1rem;
+        border-radius: 10px;
+        color: #000; }
+  .chat__textarea {
+    display: flex;
+    margin: 1rem 2rem; }
+    .chat__textarea textarea {
+      width: 100%;
+      height: 10rem;
+      border-radius: 5px;
+      padding: 1rem;
+      outline: none; }
+  .chat__heading {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: .7rem;
+    color: #fff; }
+  .chat__groups {
+    margin: 2rem 1.5rem;
+    color: #fff; }
+    .chat__groups--list {
+      padding: .2rem 1rem;
+      font-size: 1.4rem; }
+    .chat__groups--item {
+      text-decoration: none;
+      color: #fff;
+      display: block; }
+    .chat__groups--add {
+      display: flex;
+      align-items: center;
+      padding: .2rem 1rem;
+      text-decoration: none;
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      color: #fff; }
+    .chat__groups--icon {
+      height: 1.5rem;
+      width: 1.5rem;
+      margin-right: .5rem;
+      fill: #fff; }
+  .chat__group {
+    margin: 2rem 1.5rem; }
+  .chat__label {
+    font-size: 1.5rem;
+    color: #fff; }
+  .chat__search {
+    display: flex;
+    align-items: center;
+    margin-top: .5rem; }
+  .chat__btn {
+    position: absolute;
+    margin-left: 13rem;
+    margin-top: .1rem;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer; }
+    .chat__btn--icon {
+      height: 1.5rem;
+      width: 1.5rem; }
+  .chat__input {
+    width: 15rem;
+    padding: .5rem;
+    padding-right: 2rem;
+    border-radius: 5px;
+    border: none;
+    outline: none; }
+  .chat__list {
+    margin: 2rem 1.5rem; }
+    .chat__list--link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      font-size: 1.4rem;
+      color: #fff; }
 
 .account {
   display: flex;

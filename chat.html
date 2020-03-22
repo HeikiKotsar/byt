@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Heiki Kotsar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin dashboard</title>
+    <link rel="shortcut icon" type="image/jpg" href="img/HK_Logo.jpg">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+    <div class="content">
+        <div class="dashboard">
+            <div class="dashboard__profile">
+                <a href="account-details.html">
+                    <svg class="dashboard__profile--icon">
+                        <use xlink:href="img/sprite.svg#icon-user-circle-o1"></use>
+                    </svg>
+                </a>
+            </div>
+            <nav class="dashboard__sidebar">
+                <ul class="dashboard__nav">
+                    <li class="dashboard__nav--item">
+                        <a href="homepage.html" class="dashboard__nav--link">
+                            <svg class="dashboard__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-home"></use>
+                            </svg>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="dashboard__nav--item">
+                        <a href="providers.html" class="dashboard__nav--link">
+                            <svg class="dashboard__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-soccer-court"></use>
+                            </svg>
+                            <span>Find service providers</span>
+                        </a>
+                    </li>
+                    <li class="dashboard__nav--item">
+                        <a href="#" class="dashboard__nav--link">
+                            <svg class="dashboard__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-folder-open"></use>
+                            </svg>
+                            <span>Documents</span>
+                        </a>
+                    </li>
+                    <li class="dashboard__nav--item">
+                        <a href="chat.html" class="dashboard__nav--link">
+                            <svg class="dashboard__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-chat"></use>
+                            </svg>
+                            <span>Chats</span>
+                        </a>
+                    </li>
+                    <li class="dashboard__nav--item">
+                        <a href="#" class="dashboard__nav--link">
+                            <svg class="dashboard__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-calculator"></use>
+                            </svg>
+                            <span>Boards</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <p class="dashboard__copy">Book Your Training</p>
+        </div>
+        
+        <div class="events">
+            <div class="chat">
+                <div class="chat__sidebar">
+                    <h2 class="chat__heading">Clients</h2>
+                    <div class="chat__groups">
+                        <h2>Groups</h2>
+                        <div class="chat__groups--list">
+                            <a class="chat__groups--item" href="#">Admins</a>
+                            <a class="chat__groups--item" href="#">Group 2</a>
+                        </div>
+                        <a class="chat__groups--add" href="#">
+                            <svg class="chat__groups--icon">
+                                <use xlink:href="img/sprite.svg#icon-plus"></use>
+                            </svg>
+                            <span>Create group</span>
+                        </a>
+                    </div>
+                    <div class="chat__clients">
+                        <div class="chat__group">
+                            <label class="chat__label" for="search">Clients</label>
+                            <div class="chat__search">
+                                <input class="chat__input" type="search" placeholder="Search clients">
+                                <button class="chat__btn">
+                                    <svg class="chat__btn--icon">
+                                        <use xlink:href="img/2icons.svg#icon-search"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="chat__list">
+                            <div class="chat__list--item">
+                                <a class="chat__list--link" href="#">
+                                    <svg class="chat__groups--icon">
+                                        <use xlink:href="img/sprite.svg#icon-user"></use>
+                                    </svg>
+                                    <span>Toomas Saar</span>
+                                </a>
+                                <a class="chat__list--link" href="#">
+                                    <svg class="chat__groups--icon">
+                                        <use xlink:href="img/sprite.svg#icon-user"></use>
+                                    </svg>
+                                    <span>Alo Tamm</span>
+                                </a>
+                                <a class="chat__list--link" href="#">
+                                    <svg class="chat__groups--icon">
+                                        <use xlink:href="img/sprite.svg#icon-user"></use>
+                                    </svg>
+                                    <span>Kert Tamm</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat__content">
+                   
+                    <nav class="chat__header">
+                        <ul>
+                            <li><a href="#">Naide 1</a></li>
+                            <li><a href="#">Naide 2</a></li>
+                            <li><a href="#">Naide 3</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="chat__area">
+                        <div class="chat__area--client">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque ullam deserunt, architecto consequatur assumenda veritatis culpa fuga ab, ea expedita quasi. Esse quis nesciunt eligendi aut fuga, laborum deleniti itaque?</p>
+                        </div>
+                        <div class="chat__area--you">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque deserunt quisquam quidem, vitae similique incidunt, rem sequi nihil neque quas provident sed non nisi? Sequi obcaecati tempora voluptates velit delectus.</p>
+                        </div>
+                        <div class="chat__area--client">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, rem?</p>
+                        </div>
+
+                    </div>
+                    <div class="chat__textarea">
+                        <textarea name="message" id="" cols="30" rows="10" placeholder="Message Toomas Saar"></textarea>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        
+    </div>
+</body>
+</html>

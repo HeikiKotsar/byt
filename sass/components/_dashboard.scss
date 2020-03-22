@@ -142,7 +142,51 @@ body {
 }
 
 .upcoming {
-    margin-top: 5rem;
+    margin-top: 1rem;
+}
+
+.feed {
+
+    &__container {
+        padding: 1rem 2rem;
+
+        p {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__text {
+        display: flex;
+        align-items: center;
+
+        p {
+            margin-left: 1rem;
+        }
+
+        span {
+            font-size: 1.5rem;
+            margin-left: auto;
+            margin-right: 15rem;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #fff;
+        border-radius: 5px;
+        padding:  1.2rem;
+        margin: 1rem auto;
+        box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
+    }
+
+    &__select {
+        padding: .2rem 1rem;
+        border-radius: 5px;
+        outline: none;
+    }
+    
 }
 
 // EVENT DASHBOARD
@@ -187,12 +231,21 @@ body {
             padding: .5rem .2rem;
             outline: none;
             border: none;
-            width: 35rem;
+            width: 25rem;
 
             &::placeholder {
                 color: #154782;
                 font-size: 2rem;
             }
+        }
+
+        &--btn {
+            background-color: #00CF15;
+            padding: .5rem 1rem;
+            border: none;
+            border-radius: 15px;
+            color: #fff;
+            cursor: pointer;
         }
 
         input[type="text"] {
@@ -413,24 +466,30 @@ body {
     background: #eee;
 
     &__list {
-        margin: 5rem 7rem;
+        margin: 5rem 4rem;
+        width: 80%;
     }
 
     &__item {
         display: flex;
         align-items: center;
         background: #fff;
+        border-radius: 5px;
+        padding: 0rem 1rem;
+        margin-bottom: 1rem;
        
         height: auto;
 
 
         p {
-            width: 50rem;
+            width: 50%;
             font-size: 1.5rem;
+            padding: .5rem;
+            margin-right: auto;
         }
 
         input {
-            margin: 0rem 2rem;
+            margin: 0rem 1rem;
         }
     }
 
@@ -448,17 +507,70 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        
         padding: .5rem 1rem;
         border: 100%;
         
-       
+        span {
+            font-size: 1.2rem;
+        }
     }
 
     &__icon {
         height: 2.5rem;
         width: 2.5rem;
     }
+
+    &__inputdate {
+        width: 13rem;
+    }
+
+    &__status {
+        background: $primary-color;
+        color: #fff;
+        padding: .5rem 1.5rem;
+        border-radius: 20px;
+
+        &--2 {
+            height: 3rem;
+            width: 6rem;
+            background-color: #ddd;
+            border-radius: 20px;
+            
+        }
+    }
+
+    &__date {
+        padding: .4rem;
+        font-size: 1.5rem;
+    }
+
+    &__red {
+        height: 2.5rem;
+        width: 2.5rem;
+        background-color: red;
+        border-radius: 50px;
+        margin: .2rem;
+    }
+
+    &__grey {
+        height: 2.5rem;
+        width: 2.5rem;
+        background-color: #ddd;
+        border-radius: 50px;
+        margin: .2rem;
+    }
+
+    &__button {
+        margin-top: .8rem;
+        border: none;
+        background-color: #fff;
+        cursor: pointer;
+        &--icon {
+            height: 2.5rem;
+            width: 2.5rem;
+        }
+    }
+
 }
 
 
@@ -629,6 +741,37 @@ body {
             box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
         }
 
+        &--btn {
+            margin-top: .5rem;
+            margin-left: 1rem;
+            background-color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        &--icon {
+            height: 1.5rem;
+            width: 1.5rem;
+            fill: #154782;
+        }
+
+        &--option {
+            margin-top: .5rem;
+            margin-right: .5rem;
+            margin-bottom: 1rem;
+            float: right;
+        }
+
+        &--select {
+            width: 7rem;
+            outline: none;
+
+            &--2 {
+                width: 12.8rem;
+                outline: none;
+            }
+        }
+
     }
 
     &__add {
@@ -662,7 +805,7 @@ body {
     }
 
     &__names {
-        margin: 1.5rem 2rem;
+        margin: 1rem 2rem;
         padding: 1rem 0rem;
     }
 
