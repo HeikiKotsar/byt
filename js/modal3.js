@@ -1,7 +1,7 @@
 // Get DOM Elements
-const modal = document.querySelector('#my-modal');
-const modalBtn = document.querySelector('#modal-btn');
-const closeBtn = document.querySelector('.note__close');
+const modal = document.querySelector('#calendar-modal');
+const modalBtn = document.querySelector('#calendar-btn');
+const closeBtn = document.querySelector('.schedule__close');
 
 // Events
 modalBtn.addEventListener('click', openModal);
@@ -23,14 +23,4 @@ function outsideClick(e) {
   if (e.target == modal) {
     modal.style.display = 'none';
   }
-}
-
-
-
-function openSlideMenu() {
-  document.getElementById('side-menu').style.width = '250px';
-}
-
-function closeSlideMenu() {
-  document.getElementById('side-menu').style.width = '0';
 }

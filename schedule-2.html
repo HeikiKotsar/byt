@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Heiki Kotsar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin dashboard</title>
+    <link rel="shortcut icon" type="image/jpg" href="img/HK_Logo.jpg">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+    <div class="content">
+        <div class="dashboard">
+            <div class="dashboard__profile">
+                <a href="account-details.html">
+                    <svg class="dashboard__profile--icon">
+                        <use xlink:href="img/sprite.svg#icon-user-circle-o1"></use>
+                    </svg>
+                </a>
+            </div>
+            <nav class="dashboard__sidebar">
+                <ul class="dashboard__nav">
+                    <li class="dashboard__nav--item">
+                        <a href="homepage.html" class="dashboard__nav--link">
+                            <svg class="dashboard__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-home"></use>
+                            </svg>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="dashboard__nav--item">
+                        <a href="providers.html" class="dashboard__nav--link">
+                            <svg class="dashboard__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-soccer-court"></use>
+                            </svg>
+                            <span>Find service providers</span>
+                        </a>
+                    </li>
+                    <li class="dashboard__nav--item">
+                        <a href="#" class="dashboard__nav--link">
+                            <svg class="dashboard__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-folder-open"></use>
+                            </svg>
+                            <span>Documents</span>
+                        </a>
+                    </li>
+                    <li class="dashboard__nav--item">
+                        <a href="chat.html" class="dashboard__nav--link">
+                            <svg class="dashboard__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-chat"></use>
+                            </svg>
+                            <span>Chats</span>
+                        </a>
+                    </li>
+                    <li class="dashboard__nav--item">
+                        <a href="boards.html" class="dashboard__nav--link">
+                            <svg class="dashboard__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-calculator"></use>
+                            </svg>
+                            <span>Boards</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </nav>
+            <p class="dashboard__copy">Book Your Training</p>
+        </div>
+        
+        <div class="event">
+            <header class="event__header">
+                <div class="event__form">
+                    <h2 class="event__name">Event Name</h2>
+                    <div class="event__flex">
+                        <p>From: 15.02.20</p>
+                        <p>Until: 15.02.20</p>
+                    </div>
+                </div>
+                <div class="event__flex">
+                    <nav class="event__nav">
+                        <ul>
+                           <li ><a href="dashboard.html">
+                            <svg class="event__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-calculator"></use>
+                            </svg>
+                            Dashboard</a></li>
+                           <li><a href="tasks.html">
+                            <svg class="event__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-list"></use>
+                            </svg>
+                            Tasks</a></li>
+                           <li><a href="notes.html">
+                            <svg class="event__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-notes"></use>
+                            </svg>
+                               Notes</a></li>
+                            <li><a href="people.html">
+                                <svg class="event__nav--icon">
+                                    <use xlink:href="img/sprite.svg#icon-users"></use>
+                                </svg>
+                                People</a></li>
+                            <li><a href="#">
+                                <svg class="event__nav--icon">
+                                    <use xlink:href="img/sprite.svg#icon-folder-open"></use>
+                                </svg>
+                                Files</a></li>  
+                                <li class="event__active"><a href="event-schedule.html">
+                                    <svg class="event__nav--icon">
+                                        <use xlink:href="img/sprite.svg#icon-clock"></use>
+                                    </svg>
+                                    Event Schedule</a></li>     
+                        </ul>
+                    </nav>
+                    <div class="event__flex">
+
+                    </div>
+                </div>
+            </header>
+            
+                <div class="calendar-container">
+                    <div class="calendar">
+                            <div class="calendar__head">
+                                    <a id="new-btn" class="calendar__new">New
+                                        <svg class="calendar__new--icon">
+                                            <use xlink:href="img/sprite.svg#icon-plus-alt"></use>
+                                        </svg>
+                                    </a>
+                                    <form action="#" class="calendar__search">
+                                    
+                                    <select class="calendar__option" onChange="window.location.href=this.value">
+                                        <option value="schedule-2.html">Day</option>
+                                        <option value="schedule.html">Week</option>
+                                    </select>
+                                    <select class="calendar__option">
+                                        <option value="korv1">Korvpallivaljak 1</option>
+                                        <option value="korv2">Korvpallivaljak 2</option>
+                                        <option value="korv3">Korvpallivaljak 3</option>
+                                    </select>
+                                    </form>
+                                    <form class="calendar__month minus-margin-right">
+                                        <button>
+                                            <svg class="calendar__month--icon">
+                                                <use xlink:href="img/sprite.svg#icon-circle-left"></use>
+                                            </svg>
+                                        </button>
+                                        <span class="month">Monday</span>
+                                        <span class="year">16</span>
+                                        <button>
+                                            <svg class="calendar__month--icon">
+                                                <use xlink:href="img/sprite.svg#icon-circle-right"></use>
+                                            </svg>
+                                        </button>
+                                    </form>
+                            </div>
+
+                            
+                            
+                            <div class="calendar__body">
+                                <div class="timeline--2">
+                                    <ul>
+                                        <li>06.00</li>
+                                        <li>07.00</li>
+                                        <li>08.00</li>
+                                        <li>09.00</li>
+                                        <li>10.00</li>
+                                        <li>11.00</li>
+                                        <li>12.00</li>
+                                        <li>13.00</li>
+                                        <li>14.00</li>
+                                        <li>15.00</li>
+                                        <li>16.00</li>
+                                        <li>17.00</li>
+                                        <li>18.00</li>
+                                        <li>19.00</li>
+                                        <li>20.00</li>
+                                        <li>21.00</li>
+                                    </ul>
+                                </div>
+                                <div class="realtime"></div>
+                                <div class="calendar__item--day" id="item-2">
+                                    <span>TSYK</span>
+                                    <span>12.00 - 13.00</span>
+                                    <span>kirjeldus</span>
+                                </div>
+                                    <div class="sevendays">
+                                        <table class="calendar__schedule">
+                                            <tr>
+                                            <td></td>
+                                            </tr>
+                                            <tr>
+                                            <td></td>
+                                            </tr>
+                                            <tr>
+                                            <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                            </tr> 
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                            </tr> 
+                                            <tr>
+                                                <td></td>
+                                            </tr> 
+                                            <tr>
+                                                <td></td>
+                                            </tr> 
+                                            <tr>
+                                                <td></td>
+                                            </tr> 
+                                            <tr>
+                                                <td></td>
+                                            </tr> 
+                                            <tr>
+                                                <td></td>
+                                            </tr> 
+                                            <tr>
+                                                <td></td>
+                                            </tr> 
+                                            <tr>
+                                                <td></td>
+                                            </tr><tr>
+                                                <td></td>
+                                            </tr> 
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                            </tr>     
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                </div>
+
+            
+                
+                
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/modal.js"></script>
+</body>
+</html>

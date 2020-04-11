@@ -487,9 +487,11 @@ body {
 .events {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  background-color: #eee;
+  height: auto;
   margin-top: 2rem;
-  margin-left: 20%;
-  height: 200rem; }
+  margin-left: 26rem; }
   .events__flex {
     display: flex;
     align-items: center; }
@@ -500,7 +502,6 @@ body {
     border-radius: 5px;
     box-shadow: 0 -1px 0 #e5e5e5, 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24); }
     .events__item--head {
-      background-color: #2998ff;
       padding: .9rem;
       color: #fff; }
     .events__item--body {
@@ -509,11 +510,16 @@ body {
     .events__item--btn {
       padding: .5rem 1rem;
       margin-top: 1rem;
-      background: #2998ff;
       text-decoration: none;
       border-radius: 5px;
       color: #fff;
       float: right; }
+  .events__green {
+    background-color: #28b485; }
+  .events__blue {
+    background-color: #2998ff; }
+  .events__gray {
+    background-color: #ddd; }
 
 .create-event {
   display: flex;
@@ -585,7 +591,8 @@ body {
     background: #fff;
     padding: .5rem 2rem;
     position: fixed;
-    width: 100%; }
+    width: 100%;
+    z-index: 3000; }
   .event__flex {
     display: flex;
     align-items: center; }
@@ -605,6 +612,7 @@ body {
       border: none;
       border-radius: 15px;
       color: #fff;
+      outline: none;
       cursor: pointer; }
     .event__form input[type="text"] {
       font-size: 2rem;
@@ -747,6 +755,8 @@ body {
   .tasks__list {
     margin: 5rem 4rem;
     width: 80%; }
+  .tasks__link {
+    cursor: pointer; }
   .tasks__item {
     display: flex;
     align-items: center;
@@ -814,6 +824,66 @@ body {
     .tasks__button--icon {
       height: 2.5rem;
       width: 2.5rem; }
+  .tasks__add {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #55c57a; }
+    .tasks__add--icon {
+      height: 1.8rem;
+      width: 1.8rem;
+      margin-right: .5rem;
+      fill: #55c57a; }
+  .tasks__comm {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #55c57a;
+    overflow-x: hidden;
+    transition: 0.5s; }
+    .tasks__comm--container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh; }
+  .tasks__btn-close {
+    font-size: 3.5rem;
+    text-decoration: none;
+    margin-left: 22rem;
+    color: #154782;
+    margin-bottom: auto; }
+  .tasks__content {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 1rem; }
+    .tasks__content--area {
+      margin-bottom: .5rem; }
+      .tasks__content--area p {
+        background-color: #eee;
+        padding: 1rem;
+        border-radius: 5px;
+        margin: .5rem 0rem;
+        font-size: 1.3rem; }
+    .tasks__content--input {
+      display: flex;
+      height: 10rem; }
+      .tasks__content--input textarea {
+        background-color: #eee;
+        border-radius: 5px;
+        padding: .5rem;
+        outline: none; }
+      .tasks__content--input button {
+        background-color: #154782;
+        border: none;
+        margin-left: .2rem;
+        padding: 0rem .3rem;
+        border-radius: 5px;
+        outline: none;
+        color: #fff;
+        cursor: pointer; }
 
 .note {
   background: #eee; }
@@ -821,14 +891,16 @@ body {
     margin-top: 15rem;
     margin-left: 3rem;
     display: flex;
+    justify-content: center;
     align-items: center;
-    background: #2998ff;
-    width: 10rem;
+    background: #00CF15;
+    width: 12rem;
     padding: .5rem;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    cursor: pointer; }
   .note__body {
     display: grid;
     grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 20rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end]; }
@@ -859,7 +931,7 @@ body {
   .note__modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 9999;
     left: 0;
     top: 0;
     height: 100%;
@@ -869,6 +941,7 @@ body {
     .note__modal--content {
       margin: 10% auto;
       width: 45rem;
+      height: auto;
       background-color: #FFFD75;
       padding: 1.5rem;
       border-radius: 2px; }
@@ -889,6 +962,16 @@ body {
       border: none;
       outline: none;
       font-size: 1.7rem; }
+    .note__modal--save {
+      margin-left: 35rem;
+      margin-top: 1rem;
+      background: #FFFD75;
+      color: #333;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: .5rem 1rem;
+      outline: none;
+      cursor: pointer; }
   .note__close {
     margin-left: auto;
     font-size: 3rem;
@@ -983,18 +1066,311 @@ body {
     .people__name input {
       margin-right: 1rem; }
 
+.schedule {
+  margin-top: 15rem;
+  margin-left: 15rem; }
+  .schedule__add {
+    font-size: 1.6rem;
+    padding: 1rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    background-color: #2998ff;
+    width: 20rem;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer; }
+  .schedule__calendar {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 50rem;
+    margin-top: 3rem; }
+    .schedule__calendar--item {
+      display: flex;
+      align-items: center;
+      font-size: 1.4rem;
+      padding: .6rem;
+      background-color: #2998ff;
+      width: 15rem;
+      justify-content: center;
+      border-radius: 5px;
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer; }
+  .schedule__modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); }
+    .schedule__modal--content {
+      margin: 10% auto;
+      width: 44rem;
+      height: auto;
+      background-color: #fff;
+      border-radius: 2px; }
+    .schedule__modal--header {
+      display: flex;
+      flex-direction: row;
+      padding: 0rem 1.5rem; }
+    .schedule__modal--body {
+      width: 40rem;
+      margin: auto;
+      padding-bottom: .1rem; }
+    .schedule__modal--save {
+      margin-left: 35rem;
+      margin-top: 1rem;
+      background: #FFFD75;
+      color: #333;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: .5rem 1rem;
+      outline: none;
+      cursor: pointer; }
+  .schedule__group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem; }
+  .schedule__icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-right: 1rem;
+    fill: #2998ff; }
+  .schedule__input {
+    width: 34rem;
+    padding: .7rem 1.2rem;
+    border: none;
+    background-color: #eee;
+    border-radius: 5px;
+    outline: none; }
+  .schedule__date {
+    margin-right: 1.2rem;
+    padding: .7rem 1.2rem;
+    border: none;
+    background-color: #eee;
+    outline: none;
+    border-radius: 5px; }
+  .schedule__btn {
+    background-color: #2998ff;
+    padding: .6rem 1rem;
+    border: none;
+    border-radius: 10px;
+    margin-left: auto;
+    color: #fff;
+    outline: none;
+    cursor: pointer; }
+  .schedule__delete {
+    background-color: #FF4136;
+    padding: .6rem 1rem;
+    border: none;
+    border-radius: 10px;
+    margin-left: 1rem;
+    margin-right: 3rem;
+    color: #fff;
+    outline: none;
+    cursor: pointer; }
+  .schedule__close {
+    margin-left: auto;
+    font-size: 3rem;
+    color: #2998ff;
+    cursor: pointer; }
+
+.calendar {
+  margin: auto;
+  width: 100rem;
+  margin-top: 16rem;
+  margin-left: 7rem; }
+  .calendar__head {
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    background-color: #fff;
+    width: 99.4%; }
+  .calendar__new {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    background-color: #154782;
+    padding: .7rem 1rem;
+    text-decoration: none;
+    color: #fff;
+    border-top-left-radius: 1rem;
+    cursor: pointer; }
+    .calendar__new--icon {
+      height: 2rem;
+      width: 2rem;
+      margin-left: 1rem;
+      fill: #fff; }
+  .calendar__option {
+    padding: .7rem 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer; }
+  .calendar__month {
+    display: flex;
+    align-items: center;
+    padding: .8rem 1.5rem;
+    background-color: #154782;
+    color: #fff;
+    margin-left: auto;
+    border-top-right-radius: 1rem; }
+    .calendar__month--icon {
+      height: 2rem;
+      width: 2rem;
+      fill: #fff; }
+    .calendar__month span {
+      font-size: 1.5rem;
+      margin: 0rem .6rem;
+      margin-top: -.4rem; }
+    .calendar__month button {
+      background: none;
+      border: none;
+      cursor: pointer; }
+  .calendar__schedule, .calendar th, .calendar td {
+    border: .5px solid #867D7D;
+    border-collapse: collapse;
+    background-color: #fff; }
+  .calendar__schedule {
+    width: 100%; }
+  .calendar td {
+    height: 4rem; }
+  .calendar__item {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 13rem;
+    color: #fff;
+    border-radius: 4px;
+    height: 8rem;
+    margin-top: 0rem;
+    font-size: 1.2rem;
+    opacity: .9;
+    cursor: pointer; }
+    .calendar__item:hover {
+      opacity: 1;
+      z-index: 2000; }
+    .calendar__item--right {
+      margin-left: 6.5rem; }
+    .calendar__item--day {
+      position: absolute;
+      margin: 0rem 1rem;
+      width: 88rem;
+      background-color: #2998ff;
+      padding: 2rem .5rem;
+      height: 8rem;
+      margin-top: 0rem;
+      font-size: 1.2rem;
+      opacity: .9;
+      color: #fff; }
+
+.minus-margin-right {
+  margin-right: -.6rem; }
+
+.same__time {
+  width: 8rem; }
+
+#item-2 {
+  margin-top: 2rem;
+  background: #154782;
+  height: 12rem; }
+
+#item-1 {
+  margin-top: 3rem;
+  background: #00CF15; }
+
+#item-3 {
+  margin-top: 40rem;
+  background: #00CF15;
+  height: 16rem; }
+
+#item-4 {
+  margin-top: 35rem;
+  background: #00CF15;
+  height: 25rem; }
+
+#item-5 {
+  margin-top: 30rem;
+  background: #154782;
+  height: 12rem; }
+
+.timeline {
+  position: absolute;
+  z-index: 2;
+  margin-left: -4rem;
+  margin-top: 4.2rem; }
+  .timeline ul {
+    list-style: none; }
+  .timeline li {
+    margin: 2rem 0rem;
+    font-size: 1.2rem; }
+
+.timeline--2 {
+  position: absolute;
+  margin-left: -4rem;
+  margin-top: 1rem; }
+  .timeline--2 ul {
+    list-style: none; }
+  .timeline--2 li {
+    margin: 2rem 0rem;
+    font-size: 1.2rem; }
+
+.sevendays {
+  margin: 0;
+  font-size: 1.5rem;
+  display: flex; }
+  .sevendays li {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    width: 14.2%;
+    color: #666;
+    text-align: center; }
+  .sevendays__day {
+    background-color: #ddd;
+    padding: 1rem 0rem; }
+    .sevendays__day span {
+      display: block; }
+  .sevendays__oneday {
+    padding: 1rem 0rem;
+    background-color: #ddd;
+    font-size: 1.4rem; }
+  .sevendays__head {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 1rem;
+    width: 88.3rem; }
+  .sevendays__option {
+    padding: .8rem;
+    border: none;
+    outline: none;
+    cursor: pointer; }
+
+.realtime {
+  margin-top: 20rem;
+  position: absolute;
+  border: 1.5px solid orange;
+  width: 100rem; }
+
 .chat {
   display: flex;
-  height: auto; }
+  height: auto;
+  height: 100vh; }
   .chat__sidebar {
-    flex: 0 0 20%;
+    flex: 0 0 20rem;
     flex-direction: column;
     background-color: #003B81; }
   .chat__content {
     flex: 1;
     background-color: #fff;
     flex-direction: column;
-    height: 60rem;
+    margin-left: 24rem;
     display: flex;
     font-size: 1.5rem; }
   .chat__header {
@@ -1002,7 +1378,8 @@ body {
     background-color: #2998ff;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end; }
+    justify-content: flex-end;
+    margin-bottom: auto; }
     .chat__header ul {
       display: flex;
       align-items: center;
@@ -1049,6 +1426,15 @@ body {
       border-radius: 5px;
       padding: 1rem;
       outline: none; }
+    .chat__textarea--btn {
+      background-color: #2998ff;
+      border: none;
+      padding: 0rem .7rem;
+      border-radius: 5px;
+      margin-left: .4rem;
+      color: #fff;
+      outline: none;
+      cursor: pointer; }
   .chat__heading {
     font-size: 2rem;
     text-align: center;
@@ -1720,7 +2106,7 @@ input:checked + section.box .box-title:before {
   flex-direction: column;
   width: 100%;
   background-color: #eee;
-  height: 200rem;
+  height: auto;
   margin-left: 24rem; }
   .provides__header {
     display: flex;

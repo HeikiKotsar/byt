@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Heiki Kotsar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin dashboard</title>
+    <link rel="shortcut icon" type="image/jpg" href="img/HK_Logo.jpg">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+    <div class="content">
+        <div class="dashboard">
+            <div class="dashboard__profile">
+                <a href="account-details.html">
+                    <svg class="dashboard__profile--icon">
+                        <use xlink:href="img/sprite.svg#icon-user-circle-o1"></use>
+                    </svg>
+                </a>
+            </div>
+            <nav class="dashboard__sidebar">
+                <ul class="dashboard__nav">
+                    <li class="dashboard__nav--item">
+                        <a href="homepage.html" class="dashboard__nav--link">
+                            <svg class="dashboard__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-home"></use>
+                            </svg>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="dashboard__nav--item">
+                        <a href="providers.html" class="dashboard__nav--link">
+                            <svg class="dashboard__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-soccer-court"></use>
+                            </svg>
+                            <span>Find service providers</span>
+                        </a>
+                    </li>
+                    <li class="dashboard__nav--item">
+                        <a href="#" class="dashboard__nav--link">
+                            <svg class="dashboard__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-folder-open"></use>
+                            </svg>
+                            <span>Documents</span>
+                        </a>
+                    </li>
+                    <li class="dashboard__nav--item">
+                        <a href="chat.html" class="dashboard__nav--link">
+                            <svg class="dashboard__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-chat"></use>
+                            </svg>
+                            <span>Chats</span>
+                        </a>
+                    </li>
+                    <li class="dashboard__nav--item">
+                        <a href="boards.html" class="dashboard__nav--link">
+                            <svg class="dashboard__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-calculator"></use>
+                            </svg>
+                            <span>Boards</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </nav>
+            <p class="dashboard__copy">Book Your Training</p>
+        </div>
+
+       
+        
+        <div class="event">
+            <header class="event__header">
+                <div class="event__form">
+                    <h2 class="event__name">Event Name</h2>
+                    <div class="event__flex">
+                        <p>From: 15.02.20</p>
+                        <p>Until: 15.02.20</p>
+                    </div>
+                </div>
+                <div class="event__flex">
+                    <nav class="event__nav">
+                        <ul>
+                           <li ><a href="dashboard.html">
+                            <svg class="event__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-calculator"></use>
+                            </svg>
+                            Dashboard</a></li>
+                           <li><a href="tasks.html">
+                            <svg class="event__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-list"></use>
+                            </svg>
+                            Tasks</a></li>
+                           <li><a href="notes.html">
+                            <svg class="event__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-notes"></use>
+                            </svg>
+                               Notes</a></li>
+                            <li><a href="people.html">
+                                <svg class="event__nav--icon">
+                                    <use xlink:href="img/sprite.svg#icon-users"></use>
+                                </svg>
+                                People</a></li>
+                            <li><a href="#">
+                                <svg class="event__nav--icon">
+                                    <use xlink:href="img/sprite.svg#icon-folder-open"></use>
+                                </svg>
+                                Files</a></li>  
+                                <li class="event__active"><a href="event-schedule.html">
+                                    <svg class="event__nav--icon">
+                                        <use xlink:href="img/sprite.svg#icon-clock"></use>
+                                    </svg>
+                                    Event Schedule</a></li>     
+                        </ul>
+                    </nav>
+                    <div class="event__flex">
+
+                    </div>
+                </div>
+            </header>
+            
+                <div class="calendar-container">
+                    <div class="calendar">
+                            <div class="calendar__head">
+                                    <a id="calendar-btn" class="calendar__new">New
+                                        <svg class="calendar__new--icon">
+                                            <use xlink:href="img/sprite.svg#icon-plus-alt"></use>
+                                        </svg>
+                                    </a>
+                                    <form action="#" class="calendar__search">
+                                    
+                                    <select class="calendar__option" onChange="window.location.href=this.value">
+                                        <option value="schedule.html">Week</option>
+                                        <option value="schedule-2.html">Day</option>
+                                    </select>
+                                    <select class="calendar__option">
+                                        <option value="korv1">Korvpallivaljak 1</option>
+                                        <option value="korv2">Korvpallivaljak 2</option>
+                                        <option value="korv3">Korvpallivaljak 3</option>
+                                    </select>
+                                    </form>
+                                    <form class="calendar__month">
+                                        <button>
+                                            <svg class="calendar__month--icon">
+                                                <use xlink:href="img/sprite.svg#icon-circle-left"></use>
+                                            </svg>
+                                        </button>
+                                        <span class="month">January</span>
+                                        <span class="year">16-22</span>
+                                        <button>
+                                            <svg class="calendar__month--icon">
+                                                <use xlink:href="img/sprite.svg#icon-circle-right"></use>
+                                            </svg>
+                                        </button>
+                                    </form>
+                            </div>
+
+                            
+                            
+                            <div class="calendar__body">
+                                <div class="timeline">
+                                    <ul>
+                                        <li>06.00</li>
+                                        <li>07.00</li>
+                                        <li>08.00</li>
+                                        <li>09.00</li>
+                                        <li>10.00</li>
+                                        <li>11.00</li>
+                                        <li>12.00</li>
+                                        <li>13.00</li>
+                                        <li>14.00</li>
+                                        <li>15.00</li>
+                                        <li>16.00</li>
+                                        <li>17.00</li>
+                                        <li>18.00</li>
+                                        <li>19.00</li>
+                                        <li>20.00</li>
+                                        <li>21.00</li>
+                                    </ul>
+                                </div>
+                                <ul class="sevendays">
+                                    <li>
+                                        <div class="sevendays__day">
+                                            <span class="weekdays_number">16</span>
+                                            <span>Monday</span>
+                                        </div>
+                                        <div class="schedule-list">
+                                            <div class="calendar__item--right">
+                                                <div class="calendar__item same__time" id="item-2">
+                                                    <div class="calnedar__item--name">
+                                                        <span>TSUK</span>
+                                                    </div>
+                                                    <div class="calnedar__item--time">
+                                                        <span>06.00 - 08.00</span>
+                                                    </div>
+                                                    <div class="calnedar__item--desc">
+                                                        <span>kirjeldus</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                <div class="calendar__item same__time" id="item-1">
+                                                    <div class="calnedar__item--name">
+                                                        <span>TSUK</span>
+                                                    </div>
+                                                    <div class="calnedar__item--time">
+                                                        <span>06.00 - 08.00</span>
+                                                    </div>
+                                                    <div class="calnedar__item--desc">
+                                                        <span>kirjeldus</span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar__item" id="item-3">
+                                                    <div class="calnedar__item--name">
+                                                        <span>TSUK</span>
+                                                    </div>
+                                                    <div class="calnedar__item--time">
+                                                        <span>06.00 - 08.00</span>
+                                                    </div>
+                                                    <div class="calnedar__item--desc">
+                                                        <span>kirjeldus</span>
+                                                    </div>
+                                                </div>
+                                            
+                                            
+                                            <table class="calendar__schedule">
+                                                <tr>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr><tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                </tr>   
+                                            </table>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="sevendays__day">
+                                            <span class="weekdays_number active__number">17</span>
+                                            <span>Tuesday</span>
+                                        </div>
+                                        <div class="schedule-list">
+                                            
+                                            <!-- <div class="schedule__item" id="item-2">
+                                                <span>Korvpallivaljak 1:</span>
+                                                <span>TSYK</span>
+                                            </div> -->
+                                            <table class="calendar__schedule">
+                                                <tr>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr><tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                </tr>   
+                                            </table>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="sevendays__day">
+                                            <span class="weekdays_number">19</span>
+                                            <span>Wendsday</span>
+                                        </div>
+                                        <div class="schedule-list">
+                                            
+                                            <table class="calendar__schedule">
+                                                <tr>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr><tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                </tr>   
+                                            </table>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="sevendays__day">
+                                            <span class="weekdays_number active">20</span>
+                                            <span>Thurdsday</span>
+                                        </div>
+                                        <div class="schedule-list">
+                                            <div class="calendar__item--right">
+                                                <div class="calendar__item same__time" id="item-4">
+                                                    <div class="calnedar__item--name">
+                                                        <span>TSUK</span>
+                                                    </div>
+                                                    <div class="calnedar__item--time">
+                                                        <span>06.00 - 08.00</span>
+                                                    </div>
+                                                    <div class="calnedar__item--desc">
+                                                        <span>kirjeldus</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                <div class="calendar__item same__time" id="item-5">
+                                                    <div class="calnedar__item--name">
+                                                        <span>TSUK</span>
+                                                    </div>
+                                                    <div class="calnedar__item--time">
+                                                        <span>06.00 - 08.00</span>
+                                                    </div>
+                                                    <div class="calnedar__item--desc">
+                                                        <span>kirjeldus</span>
+                                                    </div>
+                                                </div>
+                                            <table class="calendar__schedule">
+                                                <tr>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr><tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                </tr>   
+                                            </table>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="sevendays__day">
+                                            <span class="weekdays_number active">21</span>
+                                            <span>Friday</span>
+                                        </div>
+                                        <div class="schedule-list">
+
+                                            <table class="calendar__schedule">
+                                                <tr>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr><tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                </tr>   
+                                            </table>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="sevendays__day">
+                                            <span class="weekdays_number active">22</span>
+                                            <span>Saturday</span>
+                                        </div>
+                                        <div class="schedule-list">
+                                            <div class="calendar__item" id="item-1">
+                                                <div class="calnedar__item--name">
+                                                    <span>TSUK</span>
+                                                </div>
+                                                <div class="calnedar__item--time">
+                                                    <span>06.00 - 08.00</span>
+                                                </div>
+                                                <div class="calnedar__item--desc">
+                                                    <span>kirjeldus</span>
+                                                </div>
+                                            </div>
+                                            <table class="calendar__schedule">
+                                                <tr>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr><tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                </tr>   
+                                            </table>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="sevendays__day">
+                                            <span class="weekdays_number">23</span>
+                                            <span>Sunday</span>
+                                        </div>
+                                        <div class="schedule-list">
+                                            <div class="calendar__item" id="item-2">
+                                                <div class="calnedar__item--name">
+                                                    <span>TSUK</span>
+                                                </div>
+                                                <div class="calnedar__item--time">
+                                                    <span>06.00 - 08.00</span>
+                                                </div>
+                                                <div class="calnedar__item--desc">
+                                                    <span>kirjeldus</span>
+                                                </div>
+                                            </div>
+                                            <table class="calendar__schedule">
+                                                <tr>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr><tr>
+                                                    <td></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                </tr>   
+                                            </table>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div> 
+                </div>
+
+            </div>
+        </div>
+
+        <div id="calendar-modal" class="schedule__modal">
+            <div class="schedule__modal--content">
+                <div class="schedule__modal--header">
+                    <span class="schedule__close">&times;</span>
+                </div>
+                <div class="schedule__modal--body">
+                    <div class="schedule__group">
+                        <svg class="schedule__icon">
+                            <use xlink:href="img/sprite.svg#icon-sports_kabaddi"></use>
+                        </svg>
+                        <input class="schedule__input" type="text" placeholder="Lisa tegevus">
+                    </div>
+                    <div class="schedule__group">
+                        <svg class="schedule__icon">
+                            <use xlink:href="img/sprite.svg#icon-sports"></use>
+                        </svg>
+                        <input class="schedule__input" type="text" placeholder="Lisa teenuse pakkuja">
+                    </div>
+                    <div class="schedule__group">
+                        <svg class="schedule__icon">
+                            <use xlink:href="img/sprite.svg#icon-clock"></use>
+                        </svg>
+                        <input class="schedule__date" type="time">
+                        <input class="schedule__date" type="time">
+                    </div>
+                    <div class="schedule__group">
+                        <svg class="schedule__icon">
+                            <use xlink:href="img/sprite.svg#icon-file-text"></use>
+                        </svg>
+                        <input class="schedule__input" type="text" placeholder="Kalendri nimi, lisa kirjeldus">
+                    </div>
+                    <div class="schedule__group">
+                        <button class="schedule__btn">Save</button>
+                        <button class="schedule__delete">Delete</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/modal3.js"></script>
+</body>
+</html>

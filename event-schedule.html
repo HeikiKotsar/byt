@@ -55,16 +55,29 @@
                         </a>
                     </li>
                     <li class="dashboard__nav--item">
-                        <a href="boards.html" class="dashboard__nav--link">
+                        <a href="#" class="dashboard__nav--link">
                             <svg class="dashboard__nav--icon">
                                 <use xlink:href="img/sprite.svg#icon-calculator"></use>
                             </svg>
                             <span>Boards</span>
                         </a>
                     </li>
+                    
                 </ul>
             </nav>
             <p class="dashboard__copy">Book Your Training</p>
+        </div>
+
+        <div id="my-modal" class="note__modal">
+            <div class="note__modal--content">
+                <div class="note__modal--header">
+                    <input type="text" placeholder="Type note heading">
+                    <span class="note__close">&times;</span>
+                </div>
+                <div class="note__modal--body">
+                    <textarea name="notetext" id="" cols="30" rows="10" placeholder="Write notes"></textarea>
+                </div>
+            </div>
         </div>
         
         <div class="event">
@@ -84,7 +97,7 @@
                                 <use xlink:href="img/sprite.svg#icon-calculator"></use>
                             </svg>
                             Dashboard</a></li>
-                           <li class="event__active"><a href="tasks.html">
+                           <li><a href="tasks.html">
                             <svg class="event__nav--icon">
                                 <use xlink:href="img/sprite.svg#icon-list"></use>
                             </svg>
@@ -94,7 +107,7 @@
                                 <use xlink:href="img/sprite.svg#icon-notes"></use>
                             </svg>
                                Notes</a></li>
-                            <li ><a href="people.html">
+                            <li><a href="people.html">
                                 <svg class="event__nav--icon">
                                     <use xlink:href="img/sprite.svg#icon-users"></use>
                                 </svg>
@@ -103,8 +116,8 @@
                                 <svg class="event__nav--icon">
                                     <use xlink:href="img/sprite.svg#icon-folder-open"></use>
                                 </svg>
-                                Files</a></li> 
-                                <li><a href="event-schedule.html">
+                                Files</a></li>  
+                                <li class="event__active"><a href="event-schedule.html">
                                     <svg class="event__nav--icon">
                                         <use xlink:href="img/sprite.svg#icon-clock"></use>
                                     </svg>
@@ -116,117 +129,76 @@
                     </div>
                 </div>
             </header>
-           <div class="tasks">
-                <div class="tasks__list">
-                    <div class="tasks__item">
-                        <input type="checkbox">
-                        <p>Otsida sobilikud spordirajatised</p>
-                        <div class="tasks__group">
-                            <span>Owner</span>
-                            <div class="tasks__owner">
-                                <span>EE</span>
-                            </div>
-                        </div>
-                        <div class="tasks__group">
-                            <span>Comments</span>
-                            <div class="tasks__comments">
-                                <a class="tasks__link" onclick="openSlideMenu()">
-                                    <svg class="tasks__icon">
-                                        <use xlink:href="img/sprite.svg#icon-bubble"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="tasks__group">
-                            <span>Status</span>
-                            <div class="tasks__status">
-                                <span>Done</span>
-                            </div>
-                        </div>
-                        <div class="tasks__group">
-                            <span>Due date</span>
-                            <span class="tasks__date">17. Aug</span>
-                        </div>
-                        <div class="tasks__group">
-                            <span>Priority</span>
-                            <span class="tasks__red"></span>
-                        </div>
-                        <div class="tasks__group">
-                            <button class="tasks__button">
-                                <svg class="tasks__button--icon">
-                                    <use xlink:href="img/sprite.svg#icon-bin"></use>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="tasks__item">
-                        <input type="checkbox">
-                        <p>Otsida sobilikud spordirajatised</p>
-                        <div class="tasks__group">
-                            <span>Owner</span>
-                            <div class="tasks__owner">
-                                <span>EE</span>
-                            </div>
-                        </div>
-                        <div class="tasks__group">
-                            <span>Comments</span>
-                            <div class="tasks__comments">
-                                <a href="#" class="tasks__link">
-                                    <svg class="tasks__icon">
-                                        <use xlink:href="img/sprite.svg#icon-bubble"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="tasks__group">
-                            <span>Status</span>
-                            <div class="tasks__status--2">
-                                <span></span>
-                            </div>
-                        </div>
-                        <div class="tasks__group">
-                            <span>Due date</span>
-                            <input class="tasks__inputdate" type="date">
-                        </div>
-                        <div class="tasks__group">
-                            <span>Priority</span>
-                            <span class="tasks__grey"></span>
-                        </div>
-                        <div class="tasks__group">
-                            <button class="tasks__button">
-                                <svg class="tasks__button--icon">
-                                    <use xlink:href="img/sprite.svg#icon-bin"></use>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-
-                    <a class="tasks__add" href="#">
-                        <svg class="tasks__add--icon">
+            <div class="schedule">
+                <a class="schedule__add" id="schedule-btn">Create new calendar
+                    <svg class="create-event__btn--icon">
+                        <use xlink:href="img/sprite.svg#icon-plus-alt"></use>
+                    </svg>
+                </a>
+                <div class="schedule__calendar">
+                    <a class="schedule__calendar--item" href="schedule.html">Calendar 1
+                        <svg class="create-event__btn--icon">
+                            <use xlink:href="img/sprite.svg#icon-calendar"></use>
+                        </svg>
+                    </a>
+                    <!-- <a class="schedule__calendar--item" id="modal-btn">Calendar 1
+                        <svg class="create-event__btn--icon">
                             <use xlink:href="img/sprite.svg#icon-plus-alt"></use>
                         </svg>
-                        Add task</a>
-                </div>
-           </div>
-           <div id="side-menu" class="tasks__comm">
-            <div class="tasks__comm--container">
-                <a href="#" class="tasks__btn-close" onclick="closeSlideMenu()">&times;</a>
-                <div class="tasks__content">
-                    
-                    <div class="tasks__content--input">
-                        <textarea name="comment" id="" cols="30" rows="10"></textarea>
-                        <button>Send</button>
-                    </div>
-                    <div class="tasks__content--area">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, quibusdam?</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui libero quibusdam, aliquid quisquam reprehenderit deleniti quos numquam fugiat dolorum rerum!</p>
-                    </div>
+                    </a> -->
+                    <!-- <a class="schedule__calendar--item" id="modal-btn">Calendar 1
+                        <svg class="create-event__btn--icon">
+                            <use xlink:href="img/sprite.svg#icon-plus-alt"></use>
+                        </svg>
+                    </a> -->
                 </div>
             </div>
-          </div>
+                
+                
+            </div>
+        </div>
+        
+        <div id="schedule-modal" class="schedule__modal">
+            <div class="schedule__modal--content">
+                <div class="schedule__modal--header">
+                    <span class="schedule__close">&times;</span>
+                </div>
+                <div class="schedule__modal--body">
+                    <div class="schedule__group">
+                        <svg class="schedule__icon">
+                            <use xlink:href="img/sprite.svg#icon-users"></use>
+                        </svg>
+                        <input class="schedule__input" type="text" placeholder="Lisa osalejad">
+                    </div>
+                    <div class="schedule__group">
+                        <svg class="schedule__icon">
+                            <use xlink:href="img/sprite.svg#icon-users"></use>
+                        </svg>
+                        <input class="schedule__input" type="text" placeholder="Lisa adminid">
+                    </div>
+                    <div class="schedule__group">
+                        <svg class="schedule__icon">
+                            <use xlink:href="img/sprite.svg#icon-calendar"></use>
+                        </svg>
+                        <input class="schedule__date" type="date">
+                        <input class="schedule__date" type="date">
+                    </div>
+                    <div class="schedule__group">
+                        <svg class="schedule__icon">
+                            <use xlink:href="img/sprite.svg#icon-file-text"></use>
+                        </svg>
+                        <input class="schedule__input" type="text" placeholder="Kalendri nimi, lisa kirjeldus">
+                    </div>
+                    <div class="schedule__group">
+                        <button class="schedule__btn">Save</button>
+                        <button class="schedule__delete">Delete</button>
+                    </div>
+                </div>
+                
+            </div>
         </div>
     </div>
-    <script src="js/modal.js"></script>
+    
+    <script src="js/modal2.js"></script>
 </body>
 </html>
