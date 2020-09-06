@@ -62,6 +62,14 @@
                             <span>Boards</span>
                         </a>
                     </li>
+                    <li class="dashboard__nav--item">
+                        <a href="boards.html" class="dashboard__nav--link">
+                            <svg class="dashboard__nav--icon">
+                                <use xlink:href="img/sprite.svg#icon-exit"></use>
+                            </svg>
+                            <span>Logout</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <p class="dashboard__copy">Book Your Training</p>
@@ -111,11 +119,46 @@
                                     Event Schedule</a></li>     
                         </ul>
                     </nav>
-                    <div class="event__flex">
-
-                    </div>
+                    
                 </div>
             </header>
+            <!-- Comments modal -->
+            <div id="comments" style="display: none;">
+                <div class="tasks__comm">
+                   <div class="tasks__comm--shadow">
+                        <div class="tasks__head">
+                            <h2>Otsida sobilikud spordirajatised, fugiat suscipit obcaecati! dkdkfkdfdfdfdfddd</h2>
+                            <a id="commentClose" class="tasks__btn-close" title="Close">
+                                <svg class="tasks__btn-close--icon">
+                                    <use xlink:href="img/sprite.svg#icon-cross"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="tasks__content">
+                            <div class="tasks__content--count">
+                                <h2>Comments:</h2>
+                                <span>14</span>
+                            </div>
+                            
+                            <div class="tasks__content--area">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, quibusdam?</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quibusdam ab laborum ducimus illum quasi nobis at tempore magni sunt!</p>
+                                <p> deleniti quos numquam fugiat dolorum rerum!</p>
+                                <p> deleni1222 quos numquam fugiat dolorum rerum!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum iure facere dolore quo excepturi recusandae quos consequuntur cupiditate nesciunt necessitatibus veniam neque, molestiae autem molestias eveniet? Non necessitatibus tempora provident.</p>
+                                <p>Viimane kommentaar</p>
+                            </div>
+                        
+                        </div>
+                        <div class="tasks__send">
+                            <textarea name="comment" id="" cols="30" rows="10" placeholder="Type message"></textarea>
+                            <button>Save</button>
+                        </div>
+                   </div>
+                </div>
+          </div>
+          <!-- ///////////// -->
+        </div>
            <div class="tasks">
                 <div class="tasks__list">
                     <div class="tasks__item">
@@ -129,8 +172,9 @@
                         </div>
                         <div class="tasks__group">
                             <span>Comments</span>
+                            <div class="tasks__count">14</div>
                             <div class="tasks__comments">
-                                <a class="tasks__link" onclick="openSlideMenu()">
+                                <a class="tasks__link" id="commentBtn">
                                     <svg class="tasks__icon">
                                         <use xlink:href="img/sprite.svg#icon-bubble"></use>
                                     </svg>
@@ -209,24 +253,23 @@
                         Add task</a>
                 </div>
            </div>
-           <div id="side-menu" class="tasks__comm">
-            <div class="tasks__comm--container">
-                <a href="#" class="tasks__btn-close" onclick="closeSlideMenu()">&times;</a>
-                <div class="tasks__content">
-                    
-                    <div class="tasks__content--input">
-                        <textarea name="comment" id="" cols="30" rows="10"></textarea>
-                        <button>Send</button>
-                    </div>
-                    <div class="tasks__content--area">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, quibusdam?</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui libero quibusdam, aliquid quisquam reprehenderit deleniti quos numquam fugiat dolorum rerum!</p>
-                    </div>
-                </div>
-            </div>
-          </div>
-        </div>
+          
     </div>
-    <script src="js/modal.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
+
+<!-- <div>
+    <a href="#" class="tasks__btn-close" onclick="closeSlideMenu()">&times;</a>
+    <div class="tasks__content">
+        
+        <div class="tasks__content--input">
+            <textarea name="comment" id="" cols="30" rows="10"></textarea>
+            <button>Send</button>
+        </div>
+        <div class="tasks__content--area">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, quibusdam?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui libero quibusdam, aliquid quisquam reprehenderit deleniti quos numquam fugiat dolorum rerum!</p>
+        </div>
+    </div>
+</div> -->

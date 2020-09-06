@@ -12,6 +12,7 @@ body {
     position: fixed;
     flex-direction: column;
     width: 24rem;
+    
     background-color: #154782;
     
     height: 100vh;
@@ -75,11 +76,12 @@ body {
     
     display: flex;
     flex-direction: column;
-    width: 100%;
+
     background-color: #eee;
     height: auto;
     margin-top: 2rem;
-    margin-left: 26rem;
+    margin-left: 24rem;
+    // margin-left: 26rem;
    
 
     &__flex {
@@ -200,25 +202,29 @@ body {
 }
 
 // EVENT DASHBOARD
+// //////////////////////////
 
 .event {
+    
     display: flex;
     flex-direction: column;
-    width: 100%;
+    
+    
+   
     background-color: #eee;
     height: 100vh;
     margin-left: 24rem;
+    
 
     &__container {
-        margin: 15rem auto;
-        // background: #ddd;
-        max-width: 100rem;
-        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 15rem 5rem;
     }
 
     &__body {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: auto auto; 
     }
 
 
@@ -268,6 +274,26 @@ body {
         p {
             font-size: 1.4rem;
             margin-right: 1rem;
+        }
+
+        &--date {
+            background: #eee;
+            border: none;
+            padding: .4rem .7rem;
+            border-radius: 5px;
+            margin-right: .5rem;
+        }
+    }
+
+    &__edit {
+        cursor: pointer;
+        border: none;
+        background: none;
+        outline: none;
+
+        &--icon {
+            width: 1.7rem;
+            height: 1.7rem;
         }
     }
 
@@ -473,10 +499,13 @@ body {
 // TASKS
 .tasks {
     margin-top: 12rem;
-    background: #eee;
+    
+    
+    width: 100%;
 
     &__list {
-        margin: 5rem 4rem;
+        margin: 5rem auto;
+        
         width: 80%;
     }
 
@@ -586,6 +615,19 @@ body {
         }
     }
 
+    
+    &__count {
+        margin-left: 2.8rem;
+        margin-top: 1.5rem;
+        position: absolute;
+        border-radius: 30px;
+        padding: 0rem .3rem;
+        background: #00CF15;
+        color: #fff;
+        opacity: .95;
+    }
+    
+
     &__add {
         display: flex;
         align-items: center;
@@ -601,41 +643,92 @@ body {
         }
     }
 
-    &__comm {
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: #55c57a;
-        overflow-x: hidden;
-        transition: 0.5s;
+    &__hidden {
+        display: none;
+    }
 
-        &--container {
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
+    &__comm {
+        position: fixed;
+        height: 100vh;
+        right: 0;
+        z-index: 9999;
+        width: 50rem;
+        // background: #154782;
+        &--shadow {
+            box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
+        }
+        
+
+        a {
+            cursor: pointer;
         }
     }
 
     &__btn-close {
-        font-size: 3.5rem;
+        font-size: 2rem;
         text-decoration: none;
-        margin-left: 22rem;
-        color: #154782;
-        margin-bottom: auto;
+       
+        color: #fff;
+        margin-left: auto;
+
+        &--icon {
+            width: 1.7rem;
+            height: 1.7rem;
+            fill: #fff;
+        }
+    }
+
+    &__head {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        padding: 1rem 0.8rem;
+        background: #154782;
+        
+
+        h2 {
+            display: flex;
+        }
     }
 
     &__content {
         display: flex;
-        flex-direction: column-reverse;
-        margin: 1rem;
+        flex-direction: column;
+        width: 50rem;
+        height: 60vh;
+        // margin-right: .2rem;
+        background: #fff;
+        overflow: hidden;
+
+        &--count {
+            display: flex;
+            align-items: center;
+            
+            h2 {
+               color: #333;
+               margin-left: 1rem;
+               margin-right: .3rem;
+            }
+
+            span {
+                font-size: 1.4rem;
+                color: #333;
+            }
+
+            margin-bottom: auto;
+        }
 
         &--area {
-            margin-bottom: .5rem;
+            display: flex;
+            flex-direction: column;
+            margin-top: auto;
+            margin: 0rem auto;
+            width: 48rem;
+            height: 100%;
+            overflow: auto;
 
             p {
+                
                 background-color: #eee;
                 padding: 1rem;
                 border-radius: 5px;
@@ -644,30 +737,46 @@ body {
             }
         }
 
-        &--input {
-            display: flex;
-            height: 10rem;
+    }
 
-            textarea {
-                background-color: #eee;
-                border-radius: 5px;
-                padding: .5rem;
-                outline: none;
-            }
+    &__send {
+        text-align: center;
+        
+        
 
-            button {
-                background-color: #154782;
-                border: none;
-                margin-left: .2rem;
-                padding: 0rem .3rem;
-                border-radius: 5px;
-                outline: none;
-                color: #fff;
-                cursor: pointer;
-            }
+        textarea {
+            
+            background: whitesmoke;
+            width: 100%;
+            font-family: "Lato", sans-serif;
+            height: 15rem;
+            padding: 1rem;
+            outline: none;
+            margin: 0;
+        }
+
+        button {
+            cursor: pointer;
+            background: #154782;
+            margin-top: -.7rem;
+            font-family: "Lato", sans-serif;
+            font-size: 1.5rem;
+            outline: none;
+            color: #fff;
+            padding: 1rem;
+            border-radius: 5px;
+            width: 100%;
         }
     }
 }
+
+// .tasks__content--area::-webkit-scrollbar {
+//     width: 10px;
+// }
+
+// .tasks__content::-webkit-scrollbar-track {
+//     background: red; 
+// }
 
 // NOTES
 .note {

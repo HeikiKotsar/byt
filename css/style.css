@@ -487,11 +487,10 @@ body {
 .events {
   display: flex;
   flex-direction: column;
-  width: 100%;
   background-color: #eee;
   height: auto;
   margin-top: 2rem;
-  margin-left: 26rem; }
+  margin-left: 24rem; }
   .events__flex {
     display: flex;
     align-items: center; }
@@ -576,14 +575,13 @@ body {
 .event {
   display: flex;
   flex-direction: column;
-  width: 100%;
   background-color: #eee;
   height: 100vh;
   margin-left: 24rem; }
   .event__container {
-    margin: 15rem auto;
-    max-width: 100rem;
-    width: 100%; }
+    display: flex;
+    flex-direction: column;
+    margin: 15rem 5rem; }
   .event__body {
     display: grid;
     grid-template-columns: auto auto; }
@@ -620,6 +618,20 @@ body {
     .event__form p {
       font-size: 1.4rem;
       margin-right: 1rem; }
+    .event__form--date {
+      background: #eee;
+      border: none;
+      padding: .4rem .7rem;
+      border-radius: 5px;
+      margin-right: .5rem; }
+  .event__edit {
+    cursor: pointer;
+    border: none;
+    background: none;
+    outline: none; }
+    .event__edit--icon {
+      width: 1.7rem;
+      height: 1.7rem; }
   .event .event__name {
     font-size: 2rem;
     color: #154782; }
@@ -751,9 +763,9 @@ body {
 
 .tasks {
   margin-top: 12rem;
-  background: #eee; }
+  width: 100%; }
   .tasks__list {
-    margin: 5rem 4rem;
+    margin: 5rem auto;
     width: 80%; }
   .tasks__link {
     cursor: pointer; }
@@ -824,6 +836,15 @@ body {
     .tasks__button--icon {
       height: 2.5rem;
       width: 2.5rem; }
+  .tasks__count {
+    margin-left: 2.8rem;
+    margin-top: 1.5rem;
+    position: absolute;
+    border-radius: 30px;
+    padding: 0rem .3rem;
+    background: #00CF15;
+    color: #fff;
+    opacity: .95; }
   .tasks__add {
     display: flex;
     align-items: center;
@@ -835,55 +856,88 @@ body {
       width: 1.8rem;
       margin-right: .5rem;
       fill: #55c57a; }
+  .tasks__hidden {
+    display: none; }
   .tasks__comm {
-    height: 100%;
-    width: 0;
     position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #55c57a;
-    overflow-x: hidden;
-    transition: 0.5s; }
-    .tasks__comm--container {
-      display: flex;
-      flex-direction: column;
-      height: 100vh; }
+    height: 100vh;
+    right: 0;
+    z-index: 9999;
+    width: 50rem; }
+    .tasks__comm--shadow {
+      box-shadow: 0 -1px 0 #e5e5e5, 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24); }
+    .tasks__comm a {
+      cursor: pointer; }
   .tasks__btn-close {
-    font-size: 3.5rem;
+    font-size: 2rem;
     text-decoration: none;
-    margin-left: 22rem;
-    color: #154782;
-    margin-bottom: auto; }
+    color: #fff;
+    margin-left: auto; }
+    .tasks__btn-close--icon {
+      width: 1.7rem;
+      height: 1.7rem;
+      fill: #fff; }
+  .tasks__head {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 1rem 0.8rem;
+    background: #154782; }
+    .tasks__head h2 {
+      display: flex; }
   .tasks__content {
     display: flex;
-    flex-direction: column-reverse;
-    margin: 1rem; }
+    flex-direction: column;
+    width: 50rem;
+    height: 60vh;
+    background: #fff;
+    overflow: hidden; }
+    .tasks__content--count {
+      display: flex;
+      align-items: center;
+      margin-bottom: auto; }
+      .tasks__content--count h2 {
+        color: #333;
+        margin-left: 1rem;
+        margin-right: .3rem; }
+      .tasks__content--count span {
+        font-size: 1.4rem;
+        color: #333; }
     .tasks__content--area {
-      margin-bottom: .5rem; }
+      display: flex;
+      flex-direction: column;
+      margin-top: auto;
+      margin: 0rem auto;
+      width: 48rem;
+      height: 100%;
+      overflow: auto; }
       .tasks__content--area p {
         background-color: #eee;
         padding: 1rem;
         border-radius: 5px;
         margin: .5rem 0rem;
         font-size: 1.3rem; }
-    .tasks__content--input {
-      display: flex;
-      height: 10rem; }
-      .tasks__content--input textarea {
-        background-color: #eee;
-        border-radius: 5px;
-        padding: .5rem;
-        outline: none; }
-      .tasks__content--input button {
-        background-color: #154782;
-        border: none;
-        margin-left: .2rem;
-        padding: 0rem .3rem;
-        border-radius: 5px;
-        outline: none;
-        color: #fff;
-        cursor: pointer; }
+  .tasks__send {
+    text-align: center; }
+    .tasks__send textarea {
+      background: whitesmoke;
+      width: 100%;
+      font-family: "Lato", sans-serif;
+      height: 15rem;
+      padding: 1rem;
+      outline: none;
+      margin: 0; }
+    .tasks__send button {
+      cursor: pointer;
+      background: #154782;
+      margin-top: -.7rem;
+      font-family: "Lato", sans-serif;
+      font-size: 1.5rem;
+      outline: none;
+      color: #fff;
+      padding: 1rem;
+      border-radius: 5px;
+      width: 100%; }
 
 .note {
   background: #eee; }
